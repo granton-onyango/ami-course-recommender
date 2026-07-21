@@ -1,0 +1,193 @@
+course_id,title,topic,level,skills_taught,duration_mins,prerequisites
+C0001,Intro to Financial Planning,financial_planning,beginner,budgeting;financial_planning;cash_flow;forecasting,90,
+C0002,Fundamentals of Financial Planning,financial_planning,beginner,budgeting;forecasting,40,
+C0003,Getting Started with Financial Planning,financial_planning,beginner,financial_planning;budgeting;forecasting;cash_flow,80,
+C0004,Intro to Financial Planning 2,financial_planning,beginner,budgeting;forecasting,80,
+C0005,Fundamentals of Financial Planning 2,financial_planning,beginner,financial_planning;budgeting;cash_flow;forecasting,20,
+C0006,Getting Started with Financial Planning 2,financial_planning,beginner,financial_planning;cash_flow,100,
+C0007,Applied Financial Planning,financial_planning,intermediate,forecasting;budgeting,40,C0002
+C0008,Practical Financial Planning,financial_planning,intermediate,forecasting;cash_flow,100,C0004
+C0009,Building Skills in Financial Planning,financial_planning,intermediate,financial_planning;forecasting;budgeting;cash_flow,40,C0001
+C0010,Applied Financial Planning 2,financial_planning,intermediate,forecasting;financial_planning;budgeting,40,C0005
+C0011,Practical Financial Planning 2,financial_planning,intermediate,cash_flow;financial_planning;budgeting;forecasting,50,C0001
+C0012,Advanced Financial Planning,financial_planning,advanced,financial_planning;forecasting;cash_flow,70,C0010
+C0013,Mastering Financial Planning,financial_planning,advanced,cash_flow;forecasting;financial_planning,40,C0009
+C0014,Strategic Financial Planning,financial_planning,advanced,cash_flow;forecasting;budgeting;financial_planning,160,C0011
+C0015,Advanced Financial Planning 2,financial_planning,advanced,cash_flow;forecasting;financial_planning,30,C0010
+C0016,Mastering Financial Planning 2,financial_planning,advanced,forecasting;cash_flow,100,C0008
+C0017,Intro to Bookkeeping,bookkeeping,beginner,ledgers;reconciliation,120,
+C0018,Fundamentals of Bookkeeping,bookkeeping,beginner,financial_records;ledgers,160,
+C0019,Getting Started with Bookkeeping,bookkeeping,beginner,reconciliation;bookkeeping,90,
+C0020,Intro to Bookkeeping 2,bookkeeping,beginner,reconciliation;financial_records;ledgers;bookkeeping,130,
+C0021,Fundamentals of Bookkeeping 2,bookkeeping,beginner,ledgers;reconciliation,170,
+C0022,Getting Started with Bookkeeping 2,bookkeeping,beginner,bookkeeping;financial_records,60,
+C0023,Applied Bookkeeping,bookkeeping,intermediate,financial_records;reconciliation,40,C0022
+C0024,Practical Bookkeeping,bookkeeping,intermediate,financial_records;reconciliation;ledgers,20,C0020
+C0025,Building Skills in Bookkeeping,bookkeeping,intermediate,bookkeeping;reconciliation;ledgers;financial_records,50,C0022
+C0026,Applied Bookkeeping 2,bookkeeping,intermediate,ledgers;financial_records;bookkeeping,100,C0019
+C0027,Practical Bookkeeping 2,bookkeeping,intermediate,bookkeeping;reconciliation,110,C0021
+C0028,Advanced Bookkeeping,bookkeeping,advanced,ledgers;bookkeeping;financial_records;reconciliation,180,C0027
+C0029,Mastering Bookkeeping,bookkeeping,advanced,reconciliation;ledgers;bookkeeping;financial_records,130,C0023
+C0030,Strategic Bookkeeping,bookkeeping,advanced,bookkeeping;financial_records,40,C0025
+C0031,Advanced Bookkeeping 2,bookkeeping,advanced,financial_records;bookkeeping;reconciliation;ledgers,170,C0023
+C0032,Mastering Bookkeeping 2,bookkeeping,advanced,reconciliation;financial_records,150,C0027
+C0033,Intro to Marketing,marketing,beginner,digital_marketing;social_media,110,
+C0034,Fundamentals of Marketing,marketing,beginner,social_media;digital_marketing;market_research,50,
+C0035,Getting Started with Marketing,marketing,beginner,digital_marketing;branding,120,
+C0036,Intro to Marketing 2,marketing,beginner,digital_marketing;social_media,90,
+C0037,Fundamentals of Marketing 2,marketing,beginner,branding;social_media,30,
+C0038,Getting Started with Marketing 2,marketing,beginner,branding;market_research,120,
+C0039,Applied Marketing,marketing,intermediate,digital_marketing;market_research;social_media;branding,60,C0033
+C0040,Practical Marketing,marketing,intermediate,market_research;branding;digital_marketing;social_media,80,C0038
+C0041,Building Skills in Marketing,marketing,intermediate,market_research;digital_marketing,150,C0033
+C0042,Applied Marketing 2,marketing,intermediate,branding;social_media;market_research,30,C0036
+C0043,Practical Marketing 2,marketing,intermediate,social_media;branding;market_research;digital_marketing,80,C0036
+C0044,Advanced Marketing,marketing,advanced,digital_marketing;market_research;branding,100,C0043
+C0045,Mastering Marketing,marketing,advanced,branding;digital_marketing,50,C0042
+C0046,Strategic Marketing,marketing,advanced,branding;market_research;social_media;digital_marketing,150,C0039
+C0047,Advanced Marketing 2,marketing,advanced,digital_marketing;market_research;branding,70,C0042
+C0048,Mastering Marketing 2,marketing,advanced,market_research;digital_marketing,160,C0042
+C0049,Intro to Sales,sales,beginner,pipeline_management;closing;customer_acquisition,60,
+C0050,Fundamentals of Sales,sales,beginner,closing;sales_pitch,30,
+C0051,Getting Started with Sales,sales,beginner,sales_pitch;closing;customer_acquisition;pipeline_management,30,
+C0052,Intro to Sales 2,sales,beginner,pipeline_management;closing;sales_pitch;customer_acquisition,180,
+C0053,Fundamentals of Sales 2,sales,beginner,customer_acquisition;sales_pitch,40,
+C0054,Getting Started with Sales 2,sales,beginner,customer_acquisition;pipeline_management;sales_pitch;closing,30,
+C0055,Applied Sales,sales,intermediate,pipeline_management;closing,180,C0053
+C0056,Practical Sales,sales,intermediate,customer_acquisition;closing;pipeline_management,90,C0051
+C0057,Building Skills in Sales,sales,intermediate,customer_acquisition;closing;pipeline_management,160,C0051
+C0058,Applied Sales 2,sales,intermediate,sales_pitch;customer_acquisition,50,C0051
+C0059,Practical Sales 2,sales,intermediate,customer_acquisition;closing;pipeline_management;sales_pitch,130,C0049
+C0060,Advanced Sales,sales,advanced,closing;customer_acquisition,70,C0055
+C0061,Mastering Sales,sales,advanced,closing;pipeline_management;sales_pitch;customer_acquisition,50,C0058
+C0062,Strategic Sales,sales,advanced,sales_pitch;pipeline_management;closing,100,C0056
+C0063,Advanced Sales 2,sales,advanced,customer_acquisition;closing;pipeline_management;sales_pitch,100,C0057
+C0064,Mastering Sales 2,sales,advanced,closing;sales_pitch;pipeline_management,150,C0059
+C0065,Intro to Leadership,leadership,beginner,team_management;decision_making;delegation,60,
+C0066,Fundamentals of Leadership,leadership,beginner,coaching;team_management;delegation;decision_making,20,
+C0067,Getting Started with Leadership,leadership,beginner,team_management;coaching,60,
+C0068,Intro to Leadership 2,leadership,beginner,team_management;delegation;decision_making;coaching,60,
+C0069,Fundamentals of Leadership 2,leadership,beginner,coaching;delegation,30,
+C0070,Getting Started with Leadership 2,leadership,beginner,delegation;coaching;team_management,50,
+C0071,Applied Leadership,leadership,intermediate,decision_making;coaching;team_management;delegation,70,C0067
+C0072,Practical Leadership,leadership,intermediate,team_management;decision_making;delegation,150,C0066
+C0073,Building Skills in Leadership,leadership,intermediate,delegation;decision_making;team_management;coaching,140,C0070
+C0074,Applied Leadership 2,leadership,intermediate,delegation;team_management;decision_making,130,C0065
+C0075,Practical Leadership 2,leadership,intermediate,delegation;team_management,80,C0067
+C0076,Advanced Leadership,leadership,advanced,coaching;team_management;delegation,130,C0074
+C0077,Mastering Leadership,leadership,advanced,coaching;team_management;decision_making,100,C0075
+C0078,Strategic Leadership,leadership,advanced,coaching;team_management;decision_making;delegation,130,C0072
+C0079,Advanced Leadership 2,leadership,advanced,team_management;delegation;decision_making,100,C0073
+C0080,Mastering Leadership 2,leadership,advanced,decision_making;team_management;coaching;delegation,150,C0071
+C0081,Intro to HR Management,hr_management,beginner,employee_relations;payroll,120,
+C0082,Fundamentals of HR Management,hr_management,beginner,recruitment;employee_relations;performance_management;payroll,150,
+C0083,Getting Started with HR Management,hr_management,beginner,payroll;employee_relations;performance_management,60,
+C0084,Intro to HR Management 2,hr_management,beginner,payroll;employee_relations,140,
+C0085,Fundamentals of HR Management 2,hr_management,beginner,performance_management;employee_relations;payroll;recruitment,20,
+C0086,Getting Started with HR Management 2,hr_management,beginner,employee_relations;recruitment;performance_management,120,
+C0087,Applied HR Management,hr_management,intermediate,payroll;employee_relations;recruitment,180,C0084
+C0088,Practical HR Management,hr_management,intermediate,performance_management;employee_relations;recruitment;payroll,180,C0084
+C0089,Building Skills in HR Management,hr_management,intermediate,employee_relations;recruitment;payroll;performance_management,90,C0086
+C0090,Applied HR Management 2,hr_management,intermediate,recruitment;payroll,90,C0082
+C0091,Practical HR Management 2,hr_management,intermediate,recruitment;performance_management;employee_relations;payroll,140,C0084
+C0092,Advanced HR Management,hr_management,advanced,performance_management;recruitment;employee_relations,50,C0090
+C0093,Mastering HR Management,hr_management,advanced,performance_management;employee_relations,180,C0090
+C0094,Strategic HR Management,hr_management,advanced,performance_management;recruitment,160,C0090
+C0095,Advanced HR Management 2,hr_management,advanced,employee_relations;performance_management;payroll,160,C0088
+C0096,Mastering HR Management 2,hr_management,advanced,payroll;performance_management;employee_relations;recruitment,100,C0088
+C0097,Intro to Digital Skills,digital_skills,beginner,online_presence;digital_tools;excel;data_analysis,160,
+C0098,Fundamentals of Digital Skills,digital_skills,beginner,digital_tools;excel,100,
+C0099,Getting Started with Digital Skills,digital_skills,beginner,digital_tools;online_presence;excel,60,
+C0100,Intro to Digital Skills 2,digital_skills,beginner,data_analysis;online_presence,60,
+C0101,Fundamentals of Digital Skills 2,digital_skills,beginner,data_analysis;excel;online_presence;digital_tools,120,
+C0102,Getting Started with Digital Skills 2,digital_skills,beginner,online_presence;data_analysis;excel;digital_tools,150,
+C0103,Applied Digital Skills,digital_skills,intermediate,excel;digital_tools;data_analysis;online_presence,20,C0100
+C0104,Practical Digital Skills,digital_skills,intermediate,online_presence;data_analysis;excel,170,C0099
+C0105,Building Skills in Digital Skills,digital_skills,intermediate,online_presence;data_analysis;excel,140,C0098
+C0106,Applied Digital Skills 2,digital_skills,intermediate,online_presence;digital_tools;excel;data_analysis,60,C0099
+C0107,Practical Digital Skills 2,digital_skills,intermediate,excel;data_analysis;online_presence;digital_tools,150,C0101
+C0108,Advanced Digital Skills,digital_skills,advanced,data_analysis;excel;online_presence,140,C0104
+C0109,Mastering Digital Skills,digital_skills,advanced,online_presence;data_analysis,120,C0105
+C0110,Strategic Digital Skills,digital_skills,advanced,online_presence;data_analysis;excel,170,C0106
+C0111,Advanced Digital Skills 2,digital_skills,advanced,excel;data_analysis;online_presence;digital_tools,30,C0103
+C0112,Mastering Digital Skills 2,digital_skills,advanced,data_analysis;excel,60,C0103
+C0113,Intro to Operations,operations,beginner,supply_chain;quality_control,50,
+C0114,Fundamentals of Operations,operations,beginner,supply_chain;quality_control;inventory;process_improvement,70,
+C0115,Getting Started with Operations,operations,beginner,process_improvement;quality_control;supply_chain;inventory,20,
+C0116,Intro to Operations 2,operations,beginner,quality_control;supply_chain;process_improvement,40,
+C0117,Fundamentals of Operations 2,operations,beginner,supply_chain;process_improvement;quality_control;inventory,30,
+C0118,Getting Started with Operations 2,operations,beginner,quality_control;inventory;supply_chain,40,
+C0119,Applied Operations,operations,intermediate,inventory;process_improvement;supply_chain;quality_control,50,C0117
+C0120,Practical Operations,operations,intermediate,quality_control;inventory;process_improvement,150,C0116
+C0121,Building Skills in Operations,operations,intermediate,inventory;quality_control;supply_chain;process_improvement,150,C0114
+C0122,Applied Operations 2,operations,intermediate,inventory;supply_chain;process_improvement;quality_control,100,C0118
+C0123,Practical Operations 2,operations,intermediate,quality_control;inventory,140,C0116
+C0124,Advanced Operations,operations,advanced,quality_control;supply_chain,70,C0121
+C0125,Mastering Operations,operations,advanced,inventory;supply_chain,120,C0122
+C0126,Strategic Operations,operations,advanced,inventory;quality_control;process_improvement;supply_chain,40,C0121
+C0127,Advanced Operations 2,operations,advanced,quality_control;supply_chain;process_improvement;inventory,170,C0120
+C0128,Mastering Operations 2,operations,advanced,process_improvement;supply_chain,90,C0122
+C0129,Intro to Strategy,strategy,beginner,competitive_analysis;growth_strategy;goal_setting,170,
+C0130,Fundamentals of Strategy,strategy,beginner,goal_setting;competitive_analysis;growth_strategy;business_planning,160,
+C0131,Getting Started with Strategy,strategy,beginner,goal_setting;competitive_analysis;business_planning,50,
+C0132,Intro to Strategy 2,strategy,beginner,competitive_analysis;growth_strategy;business_planning;goal_setting,80,
+C0133,Fundamentals of Strategy 2,strategy,beginner,growth_strategy;competitive_analysis,180,
+C0134,Getting Started with Strategy 2,strategy,beginner,goal_setting;business_planning;growth_strategy;competitive_analysis,90,
+C0135,Applied Strategy,strategy,intermediate,goal_setting;business_planning,60,C0131
+C0136,Practical Strategy,strategy,intermediate,business_planning;goal_setting,110,C0131
+C0137,Building Skills in Strategy,strategy,intermediate,growth_strategy;business_planning,20,C0134
+C0138,Applied Strategy 2,strategy,intermediate,growth_strategy;competitive_analysis;goal_setting,120,C0133
+C0139,Practical Strategy 2,strategy,intermediate,goal_setting;competitive_analysis,50,C0130
+C0140,Advanced Strategy,strategy,advanced,growth_strategy;business_planning;goal_setting,60,C0135
+C0141,Mastering Strategy,strategy,advanced,goal_setting;business_planning;growth_strategy;competitive_analysis,150,C0136
+C0142,Strategic Strategy,strategy,advanced,competitive_analysis;goal_setting;growth_strategy;business_planning,160,C0139
+C0143,Advanced Strategy 2,strategy,advanced,growth_strategy;competitive_analysis;business_planning;goal_setting,80,C0137
+C0144,Mastering Strategy 2,strategy,advanced,business_planning;growth_strategy;goal_setting,70,C0136
+C0145,Intro to Customer Service,customer_service,beginner,customer_support;retention;conflict_resolution;communication,160,
+C0146,Fundamentals of Customer Service,customer_service,beginner,retention;communication;customer_support;conflict_resolution,110,
+C0147,Getting Started with Customer Service,customer_service,beginner,conflict_resolution;retention;communication;customer_support,90,
+C0148,Intro to Customer Service 2,customer_service,beginner,communication;retention;customer_support,90,
+C0149,Fundamentals of Customer Service 2,customer_service,beginner,communication;retention;customer_support;conflict_resolution,30,
+C0150,Getting Started with Customer Service 2,customer_service,beginner,conflict_resolution;retention,110,
+C0151,Applied Customer Service,customer_service,intermediate,retention;conflict_resolution,110,C0148
+C0152,Practical Customer Service,customer_service,intermediate,conflict_resolution;retention;communication,160,C0150
+C0153,Building Skills in Customer Service,customer_service,intermediate,customer_support;communication;conflict_resolution;retention,20,C0145
+C0154,Applied Customer Service 2,customer_service,intermediate,customer_support;conflict_resolution,100,C0145
+C0155,Practical Customer Service 2,customer_service,intermediate,communication;retention,180,C0149
+C0156,Advanced Customer Service,customer_service,advanced,communication;conflict_resolution;retention,170,C0154
+C0157,Mastering Customer Service,customer_service,advanced,conflict_resolution;communication;retention,120,C0151
+C0158,Strategic Customer Service,customer_service,advanced,conflict_resolution;communication,170,C0151
+C0159,Advanced Customer Service 2,customer_service,advanced,retention;conflict_resolution;customer_support;communication,40,C0153
+C0160,Mastering Customer Service 2,customer_service,advanced,conflict_resolution;customer_support;communication,180,C0153
+C0161,Intro to Entrepreneurship,entrepreneurship,beginner,startup_basics;fundraising,30,
+C0162,Fundamentals of Entrepreneurship,entrepreneurship,beginner,pitching;startup_basics,170,
+C0163,Getting Started with Entrepreneurship,entrepreneurship,beginner,startup_basics;business_model;pitching;fundraising,60,
+C0164,Intro to Entrepreneurship 2,entrepreneurship,beginner,startup_basics;pitching;fundraising,50,
+C0165,Fundamentals of Entrepreneurship 2,entrepreneurship,beginner,fundraising;pitching,70,
+C0166,Getting Started with Entrepreneurship 2,entrepreneurship,beginner,business_model;pitching;fundraising,40,
+C0167,Applied Entrepreneurship,entrepreneurship,intermediate,startup_basics;business_model,60,C0162
+C0168,Practical Entrepreneurship,entrepreneurship,intermediate,pitching;startup_basics;fundraising;business_model,170,C0164
+C0169,Building Skills in Entrepreneurship,entrepreneurship,intermediate,startup_basics;pitching,60,C0164
+C0170,Applied Entrepreneurship 2,entrepreneurship,intermediate,fundraising;business_model,100,C0164
+C0171,Practical Entrepreneurship 2,entrepreneurship,intermediate,pitching;business_model;fundraising,110,C0164
+C0172,Advanced Entrepreneurship,entrepreneurship,advanced,startup_basics;business_model;fundraising;pitching,130,C0171
+C0173,Mastering Entrepreneurship,entrepreneurship,advanced,startup_basics;fundraising;pitching;business_model,90,C0169
+C0174,Strategic Entrepreneurship,entrepreneurship,advanced,fundraising;startup_basics;business_model,120,C0171
+C0175,Advanced Entrepreneurship 2,entrepreneurship,advanced,startup_basics;fundraising;business_model;pitching,30,C0170
+C0176,Mastering Entrepreneurship 2,entrepreneurship,advanced,pitching;business_model;fundraising;startup_basics,180,C0168
+C0177,Intro to Negotiation,negotiation,beginner,negotiation;conflict_resolution;deal_making,150,
+C0178,Fundamentals of Negotiation,negotiation,beginner,persuasion;negotiation;deal_making;conflict_resolution,120,
+C0179,Getting Started with Negotiation,negotiation,beginner,deal_making;conflict_resolution;negotiation;persuasion,140,
+C0180,Intro to Negotiation 2,negotiation,beginner,deal_making;conflict_resolution;negotiation,40,
+C0181,Fundamentals of Negotiation 2,negotiation,beginner,conflict_resolution;negotiation,40,
+C0182,Getting Started with Negotiation 2,negotiation,beginner,negotiation;conflict_resolution;deal_making,160,
+C0183,Applied Negotiation,negotiation,intermediate,conflict_resolution;negotiation;deal_making;persuasion,30,C0178
+C0184,Practical Negotiation,negotiation,intermediate,conflict_resolution;persuasion;negotiation,90,C0179
+C0185,Building Skills in Negotiation,negotiation,intermediate,persuasion;negotiation;conflict_resolution,40,C0181
+C0186,Applied Negotiation 2,negotiation,intermediate,persuasion;deal_making;negotiation,90,C0181
+C0187,Practical Negotiation 2,negotiation,intermediate,conflict_resolution;persuasion;deal_making;negotiation,160,C0180
+C0188,Advanced Negotiation,negotiation,advanced,persuasion;negotiation;deal_making;conflict_resolution,110,C0185
+C0189,Mastering Negotiation,negotiation,advanced,conflict_resolution;persuasion;deal_making;negotiation,140,C0186
+C0190,Strategic Negotiation,negotiation,advanced,persuasion;deal_making,130,C0186
+C0191,Advanced Negotiation 2,negotiation,advanced,conflict_resolution;negotiation;persuasion,100,C0187
+C0192,Mastering Negotiation 2,negotiation,advanced,negotiation;conflict_resolution;persuasion;deal_making,90,C0183
