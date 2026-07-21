@@ -15,60 +15,121 @@ from __future__ import annotations
 
 import pandas as pd
 
+from engine.filters import SENIORITY_LEVEL_CAP
+from taxonomy import TOPIC_DISPLAY
+
 
 def survey_signal(course: pd.Series, survey_row: pd.Series | None) -> tuple[float, str | None]:
-    """TODO (you implement).
+    """Topic-overlap scoring against the onboarding survey. skill_gaps /
+    goals / preferred_topics are all topic-level tags in this data (not
+    individual skills), so the overlap check is topic vs topic, weighted by
+    how strong a signal each field is: an explicit skill gap counts for
+    more than a general preference. Low confidence_by_topic nudges toward
+    the beginner course in that topic, it doesn't rule the topic out."""
+    if survey_row is None:
+        return (0.0, None)
 
-    survey_row has skill_gaps / goals / preferred_topics (semicolon-separated
-    tag strings) and confidence_by_topic ("topic:score;topic:score"). course
-    has topic and skills_taught (semicolon-separated).
+    topic = course["topic"]
+    skill_gaps = set(survey_row["skill_gaps"].split(";"))
+    goals = set(survey_row["goals"].split(";"))
+    preferred_topics = set(survey_row["preferred_topics"].split(";"))
 
-    survey_row is None if this user never filled in the survey -- handle
-    that explicitly (return what?), don't let it throw.
+    confidence_by_topic = {}
+    if survey_row["confidence_by_topic"]:
+        for pair in survey_row["confidence_by_topic"].split(";"):
+            conf_topic, conf_score = pair.split(":")
+            confidence_by_topic[conf_topic] = int(conf_score)
 
-    Guidance: reward overlap between the course's topic/skills and the
-    user's goals/skill_gaps/preferred_topics. Consider: should a topic in
-    skill_gaps count for more than one in preferred_topics? Low
-    confidence_by_topic on a topic probably means "recommend the beginner
-    course in that topic," not "avoid this topic."
-    """
-    raise NotImplementedError("survey_signal: implement tag-overlap scoring against survey data")
+    score = 0.0
+    matched_fields = []  # in priority order: strongest signal first
+
+    if topic in skill_gaps:
+        score += 0.45
+        matched_fields.append("skill_gaps")
+    if topic in goals:
+        score += 0.30
+        matched_fields.append("goals")
+    if topic in preferred_topics:
+        score += 0.15
+        matched_fields.append("preferred_topics")
+
+    low_confidence_beginner = (
+        topic in confidence_by_topic
+        and confidence_by_topic[topic] <= 2
+        and course["level"] == "beginner"
+    )
+    if low_confidence_beginner:
+        score += 0.10
+
+    if not matched_fields and not low_confidence_beginner:
+        return (0.0, None)
+
+    display = TOPIC_DISPLAY[topic]
+    if matched_fields:
+        strongest = matched_fields[0]
+        reason = {
+            "skill_gaps": f"you told us {display} is a skill gap",
+            "goals": f"improving at {display} is one of your stated goals",
+            "preferred_topics": f"you marked {display} as a topic you're interested in",
+        }[strongest]
+    else:
+        reason = f"you rated your confidence in {display} low, so we're starting you at the beginner level"
+
+    return (min(score, 1.0), reason)
 
 
 def usage_signal(
-    course: pd.Series, user_id: str, usage_events: pd.DataFrame
+    course: pd.Series, user_id: str, usage_events: pd.DataFrame, courses: pd.DataFrame
 ) -> tuple[float, str | None]:
-    """TODO (you implement).
+    """Behavior-driven scoring. Rewards having completed other courses in
+    this same topic, more so if quiz scores were good. usage_events has no
+    topic column, so `courses` is needed here to look up which topic each
+    past course_id belongs to. Dropped courses are deliberately ignored --
+    a drop might mean "wrong level," which is apply_level_filter's call to
+    make, not this function's. No usage_events at all (cold-start) or no
+    history in this specific topic both return (0.0, None), same as any
+    other signal that didn't fire."""
+    user_events = usage_events[usage_events["user_id"] == user_id]
+    if user_events.empty:
+        return (0.0, None)
 
-    usage_events for this user_id (may be empty -- that's the cold-start
-    case, capability #2). Columns: course_id, event_type, progress_pct,
-    quiz_score, timestamp.
+    topic = course["topic"]
+    topic_by_course_id = courses.set_index("course_id")["topic"]
+    same_topic = user_events[user_events["course_id"].map(topic_by_course_id) == topic]
+    if same_topic.empty:
+        return (0.0, None)
 
-    Guidance: what should count as a positive behavioral signal toward a
-    candidate course? E.g. the user completed other courses in the same
-    topic with a high quiz_score -> boost the next course in that topic's
-    progression. The user dropped courses in a topic -> maybe dampen, or
-    maybe that just means the level was wrong (that's apply_level_filter's
-    job, not this function's -- keep the concerns separate).
+    completed = same_topic[same_topic["event_type"] == "completed"]
+    if completed.empty:
+        return (0.0, None)
 
-    Empty usage_events should return (0.0, None) or similar -- NOT crash,
-    and NOT silently look identical to "actively low interest." The caller
-    (engine/weighting.py) is what decides how to treat "no usage data"
-    differently from "usage data that scored 0."
-    """
-    raise NotImplementedError("usage_signal: implement behavior-driven scoring from usage_events")
+    display = TOPIC_DISPLAY[topic]
+    quiz_scores = completed.loc[completed["quiz_score"] != "", "quiz_score"].astype(int)
+    if not quiz_scores.empty and quiz_scores.mean() >= 70:
+        return (0.8, f"you did well in other {display} courses")
+    return (0.5, f"you've completed other {display} courses")
 
 
 def work_info_signal(course: pd.Series, user_row: pd.Series) -> tuple[float, str | None]:
-    """TODO (you implement).
+    """Tie-breaker signal from the 5 categorical work-info fields.
+    stated_goal is literally a topic, so it overlap-scores like a mini
+    survey signal. seniority implies an expected level band -- reusing
+    SENIORITY_LEVEL_CAP from filters.py rather than redeclaring the same
+    mapping a second time (see taxonomy.py for why that matters)."""
+    topic = course["topic"]
+    score = 0.0
+    reason = None
 
-    user_row has role, industry, company_size, seniority, stated_goal.
+    if user_row["stated_goal"] == topic:
+        score += 0.6
+        reason = f"this matches your stated goal of {TOPIC_DISPLAY[topic]}"
 
-    Guidance: this is your weakest signal in terms of data richness (5
-    categorical fields vs. rich tag data elsewhere) -- that's fine, it's
-    supposed to be a tie-breaker / cold-start floor, not the star. Simple
-    ideas: seniority implies an expected level band; stated_goal is
-    literally a topic and should overlap-score like a mini survey signal.
-    Don't over-engineer this one.
-    """
-    raise NotImplementedError("work_info_signal: implement role/seniority/goal-based scoring")
+    expected_level = SENIORITY_LEVEL_CAP.get(user_row["seniority"])
+    if expected_level == course["level"]:
+        score += 0.4
+        if reason is None:
+            reason = "this level fits where someone at your seniority typically starts"
+
+    if score == 0.0:
+        return (0.0, None)
+    return (min(score, 1.0), reason)
