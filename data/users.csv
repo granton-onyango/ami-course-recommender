@@ -1,0 +1,1001 @@
+user_id,role,industry,company_size,seniority,stated_goal
+U00001,Founder,Technology,11-50,mid,customer_service
+U00002,Team Lead,Manufacturing,1-10,entry,leadership
+U00003,Sales Associate,Education,1-10,senior,negotiation
+U00004,Manager,Agriculture,51-200,senior,negotiation
+U00005,Analyst,Manufacturing,11-50,mid,strategy
+U00006,Team Lead,Hospitality,11-50,senior,operations
+U00007,Sales Associate,Hospitality,51-200,entry,operations
+U00008,Business Owner,Manufacturing,11-50,executive,strategy
+U00009,Team Lead,Agriculture,201-500,entry,leadership
+U00010,Founder,Agriculture,201-500,senior,entrepreneurship
+U00011,Operations Staff,Hospitality,500+,executive,entrepreneurship
+U00012,Team Lead,Agriculture,11-50,executive,financial_planning
+U00013,Founder,Technology,500+,mid,entrepreneurship
+U00014,Business Owner,Education,51-200,executive,bookkeeping
+U00015,Manager,Retail,1-10,senior,operations
+U00016,Business Owner,Agriculture,11-50,mid,digital_skills
+U00017,Analyst,Technology,500+,executive,customer_service
+U00018,Operations Staff,Manufacturing,201-500,entry,operations
+U00019,Founder,Healthcare,51-200,entry,negotiation
+U00020,Team Lead,Financial Services,201-500,executive,sales
+U00021,Sales Associate,Technology,1-10,senior,strategy
+U00022,Operations Staff,Technology,1-10,executive,leadership
+U00023,Manager,Agriculture,201-500,entry,entrepreneurship
+U00024,Manager,Retail,1-10,senior,sales
+U00025,Manager,Financial Services,1-10,mid,customer_service
+U00026,Manager,Financial Services,51-200,mid,customer_service
+U00027,Business Owner,Hospitality,11-50,mid,strategy
+U00028,Team Lead,Manufacturing,1-10,entry,marketing
+U00029,Business Owner,Technology,11-50,senior,financial_planning
+U00030,Manager,Hospitality,1-10,mid,negotiation
+U00031,Analyst,Agriculture,1-10,executive,operations
+U00032,Sales Associate,Technology,500+,entry,operations
+U00033,Founder,Financial Services,500+,entry,negotiation
+U00034,Sales Associate,Hospitality,201-500,entry,financial_planning
+U00035,Analyst,Healthcare,201-500,entry,operations
+U00036,Operations Staff,Education,1-10,entry,hr_management
+U00037,Founder,Manufacturing,1-10,mid,leadership
+U00038,Founder,Technology,201-500,senior,operations
+U00039,Founder,Healthcare,1-10,entry,entrepreneurship
+U00040,Operations Staff,Financial Services,201-500,executive,sales
+U00041,Analyst,Technology,201-500,executive,digital_skills
+U00042,Operations Staff,Agriculture,51-200,executive,hr_management
+U00043,Operations Staff,Hospitality,51-200,mid,entrepreneurship
+U00044,Analyst,Agriculture,1-10,entry,bookkeeping
+U00045,Analyst,Agriculture,51-200,mid,strategy
+U00046,Business Owner,Technology,1-10,executive,hr_management
+U00047,Sales Associate,Healthcare,1-10,senior,customer_service
+U00048,Team Lead,Technology,1-10,mid,marketing
+U00049,Operations Staff,Education,11-50,entry,hr_management
+U00050,Sales Associate,Technology,1-10,senior,customer_service
+U00051,Manager,Healthcare,500+,entry,customer_service
+U00052,Operations Staff,Hospitality,1-10,mid,leadership
+U00053,Operations Staff,Hospitality,51-200,senior,financial_planning
+U00054,Manager,Manufacturing,500+,executive,bookkeeping
+U00055,Manager,Retail,1-10,mid,digital_skills
+U00056,Analyst,Education,51-200,mid,hr_management
+U00057,Team Lead,Technology,500+,entry,financial_planning
+U00058,Manager,Manufacturing,500+,entry,entrepreneurship
+U00059,Business Owner,Hospitality,201-500,executive,operations
+U00060,Founder,Education,201-500,senior,sales
+U00061,Sales Associate,Agriculture,51-200,executive,bookkeeping
+U00062,Team Lead,Education,500+,senior,financial_planning
+U00063,Manager,Healthcare,500+,entry,financial_planning
+U00064,Manager,Hospitality,11-50,mid,leadership
+U00065,Team Lead,Technology,1-10,entry,operations
+U00066,Operations Staff,Healthcare,11-50,mid,digital_skills
+U00067,Founder,Financial Services,500+,senior,bookkeeping
+U00068,Analyst,Retail,201-500,entry,operations
+U00069,Business Owner,Technology,500+,executive,customer_service
+U00070,Analyst,Healthcare,51-200,entry,digital_skills
+U00071,Business Owner,Technology,11-50,executive,negotiation
+U00072,Team Lead,Agriculture,201-500,entry,sales
+U00073,Analyst,Healthcare,500+,entry,digital_skills
+U00074,Sales Associate,Hospitality,51-200,mid,hr_management
+U00075,Sales Associate,Manufacturing,1-10,entry,strategy
+U00076,Founder,Financial Services,51-200,senior,negotiation
+U00077,Sales Associate,Manufacturing,11-50,entry,marketing
+U00078,Team Lead,Financial Services,11-50,mid,entrepreneurship
+U00079,Business Owner,Manufacturing,201-500,executive,customer_service
+U00080,Sales Associate,Education,500+,senior,entrepreneurship
+U00081,Team Lead,Manufacturing,201-500,entry,operations
+U00082,Analyst,Hospitality,51-200,entry,hr_management
+U00083,Founder,Agriculture,51-200,executive,operations
+U00084,Business Owner,Retail,51-200,senior,bookkeeping
+U00085,Operations Staff,Agriculture,500+,executive,operations
+U00086,Founder,Retail,201-500,mid,hr_management
+U00087,Founder,Education,500+,mid,financial_planning
+U00088,Analyst,Agriculture,51-200,entry,strategy
+U00089,Operations Staff,Manufacturing,1-10,mid,negotiation
+U00090,Analyst,Education,500+,mid,hr_management
+U00091,Team Lead,Hospitality,201-500,executive,hr_management
+U00092,Operations Staff,Retail,51-200,entry,hr_management
+U00093,Business Owner,Healthcare,51-200,senior,negotiation
+U00094,Sales Associate,Manufacturing,51-200,entry,customer_service
+U00095,Operations Staff,Manufacturing,51-200,senior,entrepreneurship
+U00096,Operations Staff,Healthcare,11-50,entry,leadership
+U00097,Founder,Healthcare,51-200,mid,entrepreneurship
+U00098,Operations Staff,Agriculture,201-500,senior,financial_planning
+U00099,Team Lead,Hospitality,11-50,mid,hr_management
+U00100,Sales Associate,Education,11-50,mid,marketing
+U00101,Manager,Agriculture,51-200,entry,strategy
+U00102,Sales Associate,Retail,51-200,mid,customer_service
+U00103,Analyst,Manufacturing,11-50,mid,negotiation
+U00104,Sales Associate,Manufacturing,201-500,entry,digital_skills
+U00105,Team Lead,Financial Services,201-500,senior,negotiation
+U00106,Sales Associate,Education,11-50,mid,leadership
+U00107,Sales Associate,Education,11-50,senior,entrepreneurship
+U00108,Founder,Education,201-500,senior,digital_skills
+U00109,Founder,Healthcare,11-50,mid,customer_service
+U00110,Manager,Hospitality,1-10,executive,hr_management
+U00111,Founder,Agriculture,500+,entry,leadership
+U00112,Business Owner,Manufacturing,51-200,executive,strategy
+U00113,Manager,Healthcare,1-10,mid,operations
+U00114,Team Lead,Retail,201-500,entry,digital_skills
+U00115,Founder,Technology,11-50,executive,bookkeeping
+U00116,Team Lead,Financial Services,1-10,senior,bookkeeping
+U00117,Sales Associate,Technology,11-50,mid,financial_planning
+U00118,Team Lead,Education,11-50,executive,operations
+U00119,Founder,Retail,1-10,entry,leadership
+U00120,Manager,Manufacturing,500+,executive,bookkeeping
+U00121,Sales Associate,Hospitality,11-50,senior,bookkeeping
+U00122,Business Owner,Financial Services,201-500,executive,bookkeeping
+U00123,Business Owner,Education,500+,entry,entrepreneurship
+U00124,Founder,Financial Services,11-50,senior,digital_skills
+U00125,Business Owner,Technology,11-50,executive,marketing
+U00126,Operations Staff,Agriculture,500+,senior,bookkeeping
+U00127,Founder,Retail,201-500,executive,financial_planning
+U00128,Operations Staff,Healthcare,51-200,senior,negotiation
+U00129,Business Owner,Technology,1-10,senior,sales
+U00130,Operations Staff,Agriculture,500+,senior,marketing
+U00131,Business Owner,Technology,500+,senior,entrepreneurship
+U00132,Manager,Education,201-500,mid,marketing
+U00133,Business Owner,Education,1-10,senior,sales
+U00134,Business Owner,Financial Services,1-10,senior,leadership
+U00135,Founder,Healthcare,500+,executive,leadership
+U00136,Business Owner,Financial Services,51-200,senior,financial_planning
+U00137,Sales Associate,Technology,51-200,entry,hr_management
+U00138,Analyst,Healthcare,201-500,executive,hr_management
+U00139,Manager,Education,201-500,senior,strategy
+U00140,Team Lead,Agriculture,201-500,entry,digital_skills
+U00141,Founder,Manufacturing,500+,senior,hr_management
+U00142,Business Owner,Agriculture,51-200,senior,leadership
+U00143,Analyst,Healthcare,11-50,executive,hr_management
+U00144,Analyst,Retail,51-200,executive,leadership
+U00145,Operations Staff,Retail,1-10,executive,hr_management
+U00146,Founder,Manufacturing,1-10,mid,customer_service
+U00147,Operations Staff,Education,1-10,mid,bookkeeping
+U00148,Manager,Technology,51-200,executive,customer_service
+U00149,Business Owner,Manufacturing,201-500,senior,hr_management
+U00150,Analyst,Agriculture,500+,mid,strategy
+U00151,Team Lead,Healthcare,51-200,senior,sales
+U00152,Business Owner,Retail,11-50,executive,strategy
+U00153,Analyst,Agriculture,51-200,senior,negotiation
+U00154,Analyst,Financial Services,500+,senior,negotiation
+U00155,Analyst,Financial Services,1-10,mid,bookkeeping
+U00156,Analyst,Manufacturing,201-500,entry,entrepreneurship
+U00157,Sales Associate,Technology,51-200,entry,strategy
+U00158,Founder,Hospitality,51-200,mid,negotiation
+U00159,Operations Staff,Manufacturing,51-200,mid,bookkeeping
+U00160,Manager,Manufacturing,11-50,executive,financial_planning
+U00161,Team Lead,Technology,201-500,mid,customer_service
+U00162,Business Owner,Agriculture,51-200,executive,negotiation
+U00163,Operations Staff,Education,500+,executive,digital_skills
+U00164,Sales Associate,Agriculture,11-50,senior,entrepreneurship
+U00165,Business Owner,Education,201-500,senior,marketing
+U00166,Sales Associate,Manufacturing,11-50,executive,strategy
+U00167,Sales Associate,Retail,1-10,mid,leadership
+U00168,Manager,Manufacturing,51-200,mid,hr_management
+U00169,Founder,Hospitality,1-10,senior,sales
+U00170,Operations Staff,Hospitality,11-50,senior,customer_service
+U00171,Founder,Agriculture,500+,mid,customer_service
+U00172,Founder,Manufacturing,11-50,senior,customer_service
+U00173,Business Owner,Retail,1-10,entry,entrepreneurship
+U00174,Sales Associate,Hospitality,11-50,executive,customer_service
+U00175,Operations Staff,Retail,201-500,senior,entrepreneurship
+U00176,Team Lead,Education,11-50,executive,leadership
+U00177,Analyst,Agriculture,1-10,mid,operations
+U00178,Analyst,Education,201-500,mid,hr_management
+U00179,Founder,Manufacturing,51-200,senior,negotiation
+U00180,Sales Associate,Technology,201-500,mid,hr_management
+U00181,Founder,Agriculture,51-200,mid,operations
+U00182,Business Owner,Hospitality,201-500,mid,marketing
+U00183,Business Owner,Retail,51-200,executive,customer_service
+U00184,Analyst,Financial Services,11-50,senior,customer_service
+U00185,Operations Staff,Technology,11-50,mid,operations
+U00186,Founder,Education,201-500,senior,operations
+U00187,Business Owner,Agriculture,201-500,executive,sales
+U00188,Manager,Technology,1-10,entry,leadership
+U00189,Analyst,Education,51-200,entry,bookkeeping
+U00190,Analyst,Manufacturing,51-200,senior,digital_skills
+U00191,Team Lead,Retail,201-500,entry,customer_service
+U00192,Founder,Financial Services,51-200,senior,bookkeeping
+U00193,Analyst,Education,500+,senior,customer_service
+U00194,Operations Staff,Agriculture,11-50,entry,digital_skills
+U00195,Team Lead,Technology,500+,senior,marketing
+U00196,Manager,Healthcare,500+,entry,financial_planning
+U00197,Business Owner,Manufacturing,51-200,executive,strategy
+U00198,Analyst,Manufacturing,500+,mid,hr_management
+U00199,Founder,Technology,11-50,executive,customer_service
+U00200,Operations Staff,Hospitality,500+,senior,strategy
+U00201,Sales Associate,Education,500+,senior,operations
+U00202,Sales Associate,Retail,51-200,senior,entrepreneurship
+U00203,Business Owner,Healthcare,500+,senior,negotiation
+U00204,Sales Associate,Retail,500+,executive,leadership
+U00205,Operations Staff,Financial Services,1-10,executive,marketing
+U00206,Founder,Healthcare,11-50,mid,financial_planning
+U00207,Founder,Agriculture,11-50,entry,operations
+U00208,Team Lead,Healthcare,11-50,executive,negotiation
+U00209,Manager,Healthcare,500+,executive,negotiation
+U00210,Operations Staff,Retail,11-50,mid,strategy
+U00211,Team Lead,Education,500+,executive,hr_management
+U00212,Manager,Education,500+,senior,strategy
+U00213,Team Lead,Hospitality,500+,executive,sales
+U00214,Manager,Hospitality,500+,senior,sales
+U00215,Team Lead,Hospitality,11-50,executive,hr_management
+U00216,Analyst,Technology,500+,senior,leadership
+U00217,Business Owner,Healthcare,201-500,senior,marketing
+U00218,Team Lead,Retail,51-200,entry,hr_management
+U00219,Analyst,Hospitality,201-500,mid,sales
+U00220,Sales Associate,Hospitality,500+,senior,marketing
+U00221,Business Owner,Financial Services,11-50,entry,entrepreneurship
+U00222,Founder,Financial Services,11-50,entry,bookkeeping
+U00223,Analyst,Technology,201-500,entry,entrepreneurship
+U00224,Sales Associate,Manufacturing,1-10,mid,digital_skills
+U00225,Operations Staff,Education,201-500,mid,leadership
+U00226,Team Lead,Hospitality,1-10,entry,entrepreneurship
+U00227,Founder,Financial Services,500+,entry,marketing
+U00228,Analyst,Manufacturing,1-10,executive,operations
+U00229,Manager,Hospitality,1-10,entry,leadership
+U00230,Founder,Agriculture,51-200,senior,operations
+U00231,Operations Staff,Education,11-50,executive,leadership
+U00232,Manager,Agriculture,51-200,mid,negotiation
+U00233,Analyst,Hospitality,11-50,entry,negotiation
+U00234,Team Lead,Hospitality,500+,mid,marketing
+U00235,Founder,Healthcare,201-500,senior,bookkeeping
+U00236,Analyst,Agriculture,11-50,mid,operations
+U00237,Team Lead,Financial Services,1-10,senior,digital_skills
+U00238,Manager,Education,51-200,senior,leadership
+U00239,Founder,Retail,51-200,senior,negotiation
+U00240,Manager,Retail,1-10,executive,leadership
+U00241,Manager,Healthcare,500+,senior,negotiation
+U00242,Business Owner,Hospitality,51-200,mid,sales
+U00243,Manager,Education,11-50,executive,negotiation
+U00244,Founder,Technology,201-500,executive,strategy
+U00245,Sales Associate,Financial Services,11-50,entry,strategy
+U00246,Analyst,Technology,1-10,entry,financial_planning
+U00247,Sales Associate,Financial Services,500+,mid,marketing
+U00248,Team Lead,Education,1-10,mid,negotiation
+U00249,Founder,Education,1-10,executive,financial_planning
+U00250,Analyst,Manufacturing,500+,executive,operations
+U00251,Founder,Retail,500+,executive,entrepreneurship
+U00252,Sales Associate,Hospitality,1-10,executive,leadership
+U00253,Sales Associate,Retail,11-50,entry,financial_planning
+U00254,Analyst,Technology,1-10,entry,bookkeeping
+U00255,Analyst,Retail,51-200,executive,marketing
+U00256,Sales Associate,Manufacturing,201-500,senior,digital_skills
+U00257,Analyst,Healthcare,201-500,entry,entrepreneurship
+U00258,Operations Staff,Manufacturing,51-200,entry,marketing
+U00259,Founder,Healthcare,500+,mid,negotiation
+U00260,Manager,Retail,1-10,senior,operations
+U00261,Operations Staff,Healthcare,500+,executive,sales
+U00262,Manager,Education,51-200,mid,leadership
+U00263,Manager,Agriculture,1-10,executive,customer_service
+U00264,Sales Associate,Retail,11-50,mid,bookkeeping
+U00265,Business Owner,Retail,201-500,entry,sales
+U00266,Operations Staff,Retail,201-500,executive,sales
+U00267,Founder,Financial Services,1-10,mid,strategy
+U00268,Team Lead,Financial Services,500+,senior,customer_service
+U00269,Founder,Technology,11-50,senior,marketing
+U00270,Operations Staff,Financial Services,201-500,senior,leadership
+U00271,Business Owner,Manufacturing,201-500,executive,financial_planning
+U00272,Team Lead,Healthcare,500+,senior,negotiation
+U00273,Analyst,Healthcare,11-50,senior,digital_skills
+U00274,Manager,Education,11-50,mid,leadership
+U00275,Sales Associate,Manufacturing,201-500,entry,strategy
+U00276,Analyst,Healthcare,500+,mid,digital_skills
+U00277,Manager,Hospitality,11-50,senior,entrepreneurship
+U00278,Business Owner,Education,51-200,entry,strategy
+U00279,Operations Staff,Financial Services,1-10,senior,digital_skills
+U00280,Operations Staff,Retail,1-10,mid,customer_service
+U00281,Operations Staff,Financial Services,201-500,mid,hr_management
+U00282,Team Lead,Retail,11-50,mid,negotiation
+U00283,Business Owner,Education,11-50,mid,digital_skills
+U00284,Manager,Technology,51-200,executive,operations
+U00285,Founder,Technology,51-200,senior,hr_management
+U00286,Founder,Education,201-500,entry,negotiation
+U00287,Analyst,Technology,11-50,senior,hr_management
+U00288,Analyst,Retail,500+,mid,negotiation
+U00289,Manager,Retail,51-200,executive,leadership
+U00290,Manager,Financial Services,51-200,mid,digital_skills
+U00291,Founder,Financial Services,201-500,senior,leadership
+U00292,Sales Associate,Education,201-500,executive,marketing
+U00293,Operations Staff,Technology,11-50,mid,negotiation
+U00294,Founder,Education,11-50,entry,strategy
+U00295,Business Owner,Agriculture,1-10,entry,digital_skills
+U00296,Manager,Financial Services,1-10,mid,financial_planning
+U00297,Manager,Education,51-200,entry,customer_service
+U00298,Operations Staff,Education,201-500,entry,financial_planning
+U00299,Founder,Healthcare,1-10,entry,strategy
+U00300,Operations Staff,Hospitality,500+,senior,financial_planning
+U00301,Founder,Healthcare,11-50,entry,bookkeeping
+U00302,Founder,Manufacturing,11-50,mid,customer_service
+U00303,Founder,Hospitality,51-200,senior,digital_skills
+U00304,Business Owner,Technology,201-500,executive,customer_service
+U00305,Manager,Financial Services,51-200,entry,entrepreneurship
+U00306,Sales Associate,Retail,1-10,executive,digital_skills
+U00307,Analyst,Education,1-10,entry,negotiation
+U00308,Manager,Agriculture,201-500,executive,entrepreneurship
+U00309,Sales Associate,Technology,500+,entry,strategy
+U00310,Business Owner,Financial Services,11-50,executive,leadership
+U00311,Business Owner,Agriculture,51-200,entry,marketing
+U00312,Sales Associate,Technology,1-10,mid,customer_service
+U00313,Manager,Healthcare,1-10,senior,marketing
+U00314,Founder,Financial Services,500+,executive,entrepreneurship
+U00315,Founder,Technology,201-500,mid,negotiation
+U00316,Operations Staff,Agriculture,500+,senior,financial_planning
+U00317,Business Owner,Healthcare,11-50,entry,hr_management
+U00318,Founder,Healthcare,51-200,entry,entrepreneurship
+U00319,Team Lead,Education,201-500,mid,hr_management
+U00320,Founder,Healthcare,201-500,mid,entrepreneurship
+U00321,Founder,Healthcare,1-10,senior,sales
+U00322,Operations Staff,Agriculture,1-10,senior,marketing
+U00323,Analyst,Manufacturing,201-500,senior,hr_management
+U00324,Business Owner,Agriculture,1-10,senior,operations
+U00325,Team Lead,Hospitality,1-10,mid,bookkeeping
+U00326,Manager,Healthcare,201-500,executive,bookkeeping
+U00327,Business Owner,Agriculture,51-200,entry,customer_service
+U00328,Founder,Technology,201-500,entry,leadership
+U00329,Analyst,Healthcare,1-10,mid,customer_service
+U00330,Founder,Manufacturing,201-500,mid,marketing
+U00331,Team Lead,Hospitality,51-200,executive,marketing
+U00332,Business Owner,Manufacturing,201-500,senior,digital_skills
+U00333,Team Lead,Education,1-10,senior,leadership
+U00334,Manager,Education,500+,mid,operations
+U00335,Business Owner,Manufacturing,51-200,entry,digital_skills
+U00336,Team Lead,Healthcare,51-200,executive,hr_management
+U00337,Analyst,Manufacturing,51-200,senior,customer_service
+U00338,Operations Staff,Financial Services,201-500,senior,marketing
+U00339,Analyst,Technology,51-200,executive,customer_service
+U00340,Sales Associate,Financial Services,51-200,executive,leadership
+U00341,Sales Associate,Healthcare,51-200,entry,customer_service
+U00342,Manager,Manufacturing,500+,entry,negotiation
+U00343,Analyst,Financial Services,201-500,senior,negotiation
+U00344,Business Owner,Healthcare,201-500,mid,entrepreneurship
+U00345,Team Lead,Financial Services,51-200,mid,negotiation
+U00346,Analyst,Healthcare,1-10,executive,customer_service
+U00347,Analyst,Healthcare,500+,executive,strategy
+U00348,Business Owner,Technology,500+,entry,bookkeeping
+U00349,Sales Associate,Financial Services,51-200,mid,entrepreneurship
+U00350,Founder,Retail,500+,executive,hr_management
+U00351,Sales Associate,Healthcare,1-10,entry,bookkeeping
+U00352,Team Lead,Financial Services,500+,mid,operations
+U00353,Team Lead,Healthcare,201-500,mid,hr_management
+U00354,Business Owner,Education,1-10,senior,digital_skills
+U00355,Business Owner,Agriculture,11-50,senior,leadership
+U00356,Team Lead,Education,11-50,executive,hr_management
+U00357,Analyst,Agriculture,201-500,executive,hr_management
+U00358,Business Owner,Hospitality,1-10,entry,financial_planning
+U00359,Sales Associate,Technology,1-10,mid,negotiation
+U00360,Manager,Manufacturing,500+,mid,hr_management
+U00361,Founder,Healthcare,201-500,mid,digital_skills
+U00362,Operations Staff,Manufacturing,11-50,executive,digital_skills
+U00363,Business Owner,Financial Services,201-500,executive,digital_skills
+U00364,Business Owner,Financial Services,11-50,senior,negotiation
+U00365,Sales Associate,Agriculture,500+,entry,strategy
+U00366,Manager,Technology,51-200,mid,operations
+U00367,Business Owner,Hospitality,201-500,senior,customer_service
+U00368,Analyst,Healthcare,500+,entry,hr_management
+U00369,Team Lead,Education,500+,mid,entrepreneurship
+U00370,Operations Staff,Hospitality,500+,entry,entrepreneurship
+U00371,Manager,Technology,1-10,mid,leadership
+U00372,Business Owner,Manufacturing,51-200,mid,strategy
+U00373,Analyst,Healthcare,500+,mid,customer_service
+U00374,Analyst,Healthcare,11-50,executive,entrepreneurship
+U00375,Founder,Manufacturing,500+,mid,operations
+U00376,Team Lead,Manufacturing,11-50,senior,operations
+U00377,Founder,Retail,51-200,entry,operations
+U00378,Manager,Financial Services,201-500,executive,digital_skills
+U00379,Operations Staff,Education,201-500,executive,operations
+U00380,Manager,Agriculture,500+,entry,sales
+U00381,Team Lead,Retail,51-200,mid,strategy
+U00382,Team Lead,Manufacturing,201-500,executive,strategy
+U00383,Founder,Agriculture,500+,entry,leadership
+U00384,Sales Associate,Technology,500+,entry,negotiation
+U00385,Analyst,Financial Services,201-500,entry,negotiation
+U00386,Sales Associate,Financial Services,51-200,entry,operations
+U00387,Team Lead,Technology,1-10,executive,bookkeeping
+U00388,Sales Associate,Financial Services,11-50,senior,negotiation
+U00389,Founder,Healthcare,11-50,mid,sales
+U00390,Sales Associate,Financial Services,1-10,senior,strategy
+U00391,Team Lead,Manufacturing,51-200,senior,leadership
+U00392,Founder,Hospitality,500+,entry,marketing
+U00393,Sales Associate,Healthcare,1-10,senior,entrepreneurship
+U00394,Manager,Manufacturing,11-50,mid,negotiation
+U00395,Team Lead,Financial Services,201-500,executive,marketing
+U00396,Founder,Hospitality,201-500,executive,operations
+U00397,Business Owner,Agriculture,201-500,senior,negotiation
+U00398,Team Lead,Education,201-500,senior,customer_service
+U00399,Business Owner,Agriculture,201-500,senior,bookkeeping
+U00400,Sales Associate,Healthcare,11-50,executive,sales
+U00401,Analyst,Hospitality,51-200,senior,hr_management
+U00402,Founder,Manufacturing,500+,executive,hr_management
+U00403,Operations Staff,Retail,1-10,entry,entrepreneurship
+U00404,Sales Associate,Education,1-10,entry,marketing
+U00405,Analyst,Education,1-10,executive,sales
+U00406,Operations Staff,Manufacturing,51-200,mid,leadership
+U00407,Business Owner,Technology,51-200,entry,hr_management
+U00408,Operations Staff,Manufacturing,1-10,executive,entrepreneurship
+U00409,Team Lead,Financial Services,201-500,entry,negotiation
+U00410,Business Owner,Retail,11-50,executive,bookkeeping
+U00411,Manager,Financial Services,500+,executive,financial_planning
+U00412,Business Owner,Technology,1-10,executive,negotiation
+U00413,Manager,Education,1-10,mid,digital_skills
+U00414,Business Owner,Agriculture,1-10,senior,hr_management
+U00415,Team Lead,Manufacturing,201-500,mid,entrepreneurship
+U00416,Operations Staff,Manufacturing,1-10,entry,customer_service
+U00417,Operations Staff,Manufacturing,201-500,senior,negotiation
+U00418,Manager,Manufacturing,201-500,executive,sales
+U00419,Business Owner,Agriculture,11-50,entry,customer_service
+U00420,Operations Staff,Healthcare,51-200,executive,hr_management
+U00421,Sales Associate,Manufacturing,11-50,senior,entrepreneurship
+U00422,Business Owner,Financial Services,500+,senior,negotiation
+U00423,Business Owner,Hospitality,11-50,mid,negotiation
+U00424,Analyst,Hospitality,1-10,mid,operations
+U00425,Analyst,Agriculture,11-50,executive,entrepreneurship
+U00426,Founder,Agriculture,500+,entry,hr_management
+U00427,Team Lead,Manufacturing,201-500,executive,hr_management
+U00428,Founder,Manufacturing,201-500,entry,financial_planning
+U00429,Founder,Agriculture,1-10,senior,sales
+U00430,Business Owner,Retail,201-500,senior,entrepreneurship
+U00431,Operations Staff,Healthcare,201-500,executive,bookkeeping
+U00432,Operations Staff,Manufacturing,51-200,entry,leadership
+U00433,Business Owner,Financial Services,11-50,senior,digital_skills
+U00434,Founder,Agriculture,51-200,executive,negotiation
+U00435,Sales Associate,Financial Services,1-10,mid,bookkeeping
+U00436,Analyst,Agriculture,201-500,entry,leadership
+U00437,Operations Staff,Manufacturing,1-10,entry,negotiation
+U00438,Manager,Retail,11-50,executive,hr_management
+U00439,Founder,Hospitality,11-50,senior,marketing
+U00440,Operations Staff,Hospitality,1-10,entry,hr_management
+U00441,Sales Associate,Healthcare,51-200,entry,leadership
+U00442,Operations Staff,Agriculture,201-500,executive,strategy
+U00443,Team Lead,Retail,201-500,mid,hr_management
+U00444,Manager,Hospitality,1-10,entry,sales
+U00445,Operations Staff,Retail,1-10,entry,sales
+U00446,Business Owner,Education,51-200,executive,marketing
+U00447,Manager,Retail,500+,executive,sales
+U00448,Team Lead,Financial Services,201-500,senior,leadership
+U00449,Sales Associate,Agriculture,500+,senior,bookkeeping
+U00450,Founder,Retail,11-50,mid,strategy
+U00451,Business Owner,Healthcare,1-10,executive,leadership
+U00452,Sales Associate,Hospitality,51-200,entry,strategy
+U00453,Analyst,Retail,51-200,mid,leadership
+U00454,Founder,Hospitality,500+,mid,operations
+U00455,Team Lead,Education,11-50,mid,marketing
+U00456,Business Owner,Healthcare,1-10,mid,strategy
+U00457,Team Lead,Retail,51-200,entry,entrepreneurship
+U00458,Analyst,Hospitality,1-10,mid,strategy
+U00459,Manager,Healthcare,201-500,entry,marketing
+U00460,Operations Staff,Hospitality,1-10,entry,sales
+U00461,Sales Associate,Healthcare,51-200,executive,negotiation
+U00462,Business Owner,Agriculture,500+,mid,entrepreneurship
+U00463,Sales Associate,Healthcare,1-10,entry,digital_skills
+U00464,Operations Staff,Manufacturing,11-50,senior,leadership
+U00465,Sales Associate,Technology,201-500,senior,hr_management
+U00466,Analyst,Hospitality,11-50,entry,sales
+U00467,Manager,Agriculture,11-50,entry,marketing
+U00468,Analyst,Education,51-200,executive,bookkeeping
+U00469,Founder,Technology,11-50,executive,leadership
+U00470,Analyst,Hospitality,1-10,entry,marketing
+U00471,Sales Associate,Hospitality,500+,entry,sales
+U00472,Sales Associate,Technology,11-50,entry,negotiation
+U00473,Manager,Technology,201-500,entry,entrepreneurship
+U00474,Team Lead,Hospitality,11-50,entry,digital_skills
+U00475,Sales Associate,Education,500+,mid,bookkeeping
+U00476,Analyst,Agriculture,11-50,entry,financial_planning
+U00477,Business Owner,Financial Services,11-50,mid,digital_skills
+U00478,Team Lead,Agriculture,500+,senior,bookkeeping
+U00479,Business Owner,Agriculture,11-50,executive,marketing
+U00480,Business Owner,Technology,1-10,entry,operations
+U00481,Business Owner,Manufacturing,500+,executive,negotiation
+U00482,Analyst,Education,1-10,executive,entrepreneurship
+U00483,Analyst,Manufacturing,51-200,mid,marketing
+U00484,Team Lead,Hospitality,201-500,mid,financial_planning
+U00485,Founder,Financial Services,51-200,executive,digital_skills
+U00486,Founder,Education,1-10,entry,leadership
+U00487,Analyst,Manufacturing,201-500,mid,entrepreneurship
+U00488,Sales Associate,Financial Services,500+,entry,digital_skills
+U00489,Sales Associate,Technology,201-500,executive,hr_management
+U00490,Founder,Technology,201-500,senior,marketing
+U00491,Business Owner,Technology,500+,mid,financial_planning
+U00492,Sales Associate,Hospitality,1-10,executive,strategy
+U00493,Team Lead,Financial Services,11-50,entry,sales
+U00494,Operations Staff,Financial Services,51-200,entry,sales
+U00495,Founder,Healthcare,51-200,mid,marketing
+U00496,Manager,Technology,51-200,entry,negotiation
+U00497,Operations Staff,Technology,500+,mid,customer_service
+U00498,Manager,Education,500+,senior,marketing
+U00499,Analyst,Retail,1-10,entry,sales
+U00500,Founder,Financial Services,1-10,executive,financial_planning
+U00501,Team Lead,Financial Services,11-50,senior,negotiation
+U00502,Manager,Technology,1-10,entry,marketing
+U00503,Founder,Manufacturing,1-10,senior,bookkeeping
+U00504,Team Lead,Healthcare,500+,entry,hr_management
+U00505,Team Lead,Technology,11-50,mid,negotiation
+U00506,Analyst,Education,51-200,mid,negotiation
+U00507,Founder,Technology,11-50,mid,digital_skills
+U00508,Team Lead,Hospitality,11-50,mid,negotiation
+U00509,Business Owner,Healthcare,500+,entry,marketing
+U00510,Founder,Technology,500+,mid,entrepreneurship
+U00511,Founder,Agriculture,201-500,mid,hr_management
+U00512,Operations Staff,Agriculture,11-50,senior,hr_management
+U00513,Manager,Agriculture,51-200,executive,financial_planning
+U00514,Team Lead,Financial Services,11-50,entry,hr_management
+U00515,Team Lead,Agriculture,1-10,entry,digital_skills
+U00516,Analyst,Healthcare,11-50,executive,operations
+U00517,Analyst,Technology,500+,executive,bookkeeping
+U00518,Sales Associate,Education,500+,mid,marketing
+U00519,Analyst,Agriculture,1-10,senior,financial_planning
+U00520,Team Lead,Hospitality,1-10,entry,hr_management
+U00521,Manager,Healthcare,11-50,entry,strategy
+U00522,Business Owner,Technology,500+,executive,negotiation
+U00523,Business Owner,Healthcare,11-50,executive,marketing
+U00524,Business Owner,Agriculture,51-200,mid,sales
+U00525,Analyst,Hospitality,51-200,senior,sales
+U00526,Business Owner,Retail,201-500,executive,marketing
+U00527,Business Owner,Technology,1-10,executive,bookkeeping
+U00528,Team Lead,Education,11-50,entry,financial_planning
+U00529,Manager,Manufacturing,51-200,entry,operations
+U00530,Sales Associate,Agriculture,51-200,executive,operations
+U00531,Analyst,Hospitality,1-10,executive,marketing
+U00532,Team Lead,Healthcare,51-200,mid,operations
+U00533,Business Owner,Hospitality,201-500,executive,leadership
+U00534,Manager,Hospitality,500+,entry,marketing
+U00535,Sales Associate,Agriculture,1-10,senior,strategy
+U00536,Analyst,Financial Services,500+,entry,digital_skills
+U00537,Sales Associate,Healthcare,500+,executive,customer_service
+U00538,Manager,Education,51-200,entry,digital_skills
+U00539,Sales Associate,Retail,500+,mid,bookkeeping
+U00540,Sales Associate,Education,11-50,mid,sales
+U00541,Sales Associate,Financial Services,11-50,entry,digital_skills
+U00542,Business Owner,Healthcare,11-50,mid,customer_service
+U00543,Team Lead,Technology,1-10,entry,digital_skills
+U00544,Founder,Healthcare,500+,senior,leadership
+U00545,Founder,Education,1-10,executive,bookkeeping
+U00546,Analyst,Manufacturing,11-50,entry,bookkeeping
+U00547,Founder,Agriculture,51-200,senior,digital_skills
+U00548,Team Lead,Healthcare,201-500,executive,financial_planning
+U00549,Manager,Hospitality,201-500,mid,customer_service
+U00550,Founder,Healthcare,1-10,executive,hr_management
+U00551,Operations Staff,Financial Services,1-10,executive,leadership
+U00552,Team Lead,Retail,51-200,senior,leadership
+U00553,Team Lead,Education,1-10,mid,marketing
+U00554,Team Lead,Education,51-200,senior,negotiation
+U00555,Analyst,Agriculture,11-50,executive,sales
+U00556,Sales Associate,Healthcare,201-500,senior,financial_planning
+U00557,Founder,Manufacturing,1-10,senior,negotiation
+U00558,Founder,Healthcare,11-50,entry,marketing
+U00559,Manager,Financial Services,1-10,mid,financial_planning
+U00560,Analyst,Retail,51-200,mid,leadership
+U00561,Team Lead,Education,500+,executive,entrepreneurship
+U00562,Business Owner,Retail,11-50,senior,operations
+U00563,Founder,Education,11-50,executive,customer_service
+U00564,Founder,Technology,51-200,mid,leadership
+U00565,Operations Staff,Agriculture,51-200,entry,digital_skills
+U00566,Business Owner,Manufacturing,500+,mid,sales
+U00567,Operations Staff,Financial Services,11-50,senior,entrepreneurship
+U00568,Analyst,Retail,1-10,executive,marketing
+U00569,Operations Staff,Manufacturing,500+,entry,sales
+U00570,Team Lead,Hospitality,51-200,executive,digital_skills
+U00571,Sales Associate,Technology,201-500,senior,sales
+U00572,Analyst,Hospitality,500+,executive,customer_service
+U00573,Business Owner,Retail,500+,senior,strategy
+U00574,Operations Staff,Hospitality,51-200,entry,operations
+U00575,Business Owner,Technology,51-200,senior,leadership
+U00576,Team Lead,Hospitality,11-50,mid,strategy
+U00577,Sales Associate,Financial Services,1-10,executive,entrepreneurship
+U00578,Team Lead,Manufacturing,1-10,executive,leadership
+U00579,Team Lead,Healthcare,201-500,executive,negotiation
+U00580,Business Owner,Financial Services,51-200,mid,entrepreneurship
+U00581,Founder,Education,51-200,senior,marketing
+U00582,Sales Associate,Manufacturing,51-200,entry,operations
+U00583,Manager,Hospitality,500+,mid,entrepreneurship
+U00584,Team Lead,Agriculture,11-50,senior,sales
+U00585,Operations Staff,Hospitality,201-500,senior,hr_management
+U00586,Team Lead,Hospitality,201-500,entry,operations
+U00587,Business Owner,Agriculture,201-500,mid,strategy
+U00588,Business Owner,Healthcare,500+,senior,digital_skills
+U00589,Business Owner,Manufacturing,11-50,mid,hr_management
+U00590,Analyst,Education,11-50,senior,negotiation
+U00591,Manager,Agriculture,201-500,senior,entrepreneurship
+U00592,Manager,Technology,1-10,entry,operations
+U00593,Team Lead,Financial Services,11-50,mid,operations
+U00594,Sales Associate,Agriculture,11-50,executive,entrepreneurship
+U00595,Analyst,Healthcare,201-500,executive,digital_skills
+U00596,Business Owner,Retail,500+,mid,negotiation
+U00597,Team Lead,Retail,51-200,mid,financial_planning
+U00598,Operations Staff,Retail,11-50,mid,negotiation
+U00599,Team Lead,Hospitality,11-50,entry,digital_skills
+U00600,Founder,Hospitality,11-50,entry,financial_planning
+U00601,Team Lead,Hospitality,201-500,senior,digital_skills
+U00602,Operations Staff,Manufacturing,51-200,executive,hr_management
+U00603,Sales Associate,Financial Services,11-50,executive,financial_planning
+U00604,Manager,Financial Services,11-50,mid,negotiation
+U00605,Business Owner,Manufacturing,1-10,senior,negotiation
+U00606,Operations Staff,Retail,201-500,senior,strategy
+U00607,Founder,Retail,500+,entry,entrepreneurship
+U00608,Business Owner,Retail,1-10,entry,digital_skills
+U00609,Analyst,Healthcare,1-10,senior,operations
+U00610,Operations Staff,Manufacturing,11-50,entry,leadership
+U00611,Analyst,Agriculture,500+,senior,customer_service
+U00612,Founder,Manufacturing,201-500,entry,strategy
+U00613,Operations Staff,Agriculture,51-200,entry,bookkeeping
+U00614,Analyst,Financial Services,500+,mid,leadership
+U00615,Sales Associate,Financial Services,51-200,executive,leadership
+U00616,Manager,Retail,500+,executive,sales
+U00617,Operations Staff,Education,51-200,mid,financial_planning
+U00618,Business Owner,Agriculture,1-10,executive,marketing
+U00619,Business Owner,Agriculture,1-10,senior,entrepreneurship
+U00620,Manager,Education,51-200,senior,operations
+U00621,Business Owner,Agriculture,11-50,entry,leadership
+U00622,Team Lead,Technology,201-500,entry,bookkeeping
+U00623,Sales Associate,Retail,1-10,mid,entrepreneurship
+U00624,Operations Staff,Manufacturing,51-200,senior,operations
+U00625,Founder,Hospitality,1-10,senior,hr_management
+U00626,Manager,Agriculture,201-500,executive,operations
+U00627,Team Lead,Healthcare,201-500,executive,entrepreneurship
+U00628,Sales Associate,Manufacturing,1-10,mid,negotiation
+U00629,Operations Staff,Retail,11-50,entry,digital_skills
+U00630,Founder,Education,500+,executive,marketing
+U00631,Founder,Healthcare,51-200,entry,entrepreneurship
+U00632,Sales Associate,Manufacturing,201-500,executive,bookkeeping
+U00633,Analyst,Education,1-10,entry,leadership
+U00634,Operations Staff,Technology,1-10,mid,entrepreneurship
+U00635,Sales Associate,Technology,500+,entry,digital_skills
+U00636,Operations Staff,Financial Services,201-500,senior,entrepreneurship
+U00637,Operations Staff,Healthcare,11-50,entry,financial_planning
+U00638,Operations Staff,Manufacturing,500+,executive,operations
+U00639,Sales Associate,Manufacturing,1-10,executive,hr_management
+U00640,Manager,Technology,51-200,entry,strategy
+U00641,Manager,Healthcare,201-500,mid,bookkeeping
+U00642,Analyst,Education,500+,executive,bookkeeping
+U00643,Sales Associate,Education,201-500,senior,bookkeeping
+U00644,Analyst,Retail,1-10,executive,digital_skills
+U00645,Business Owner,Retail,1-10,senior,strategy
+U00646,Founder,Financial Services,201-500,senior,hr_management
+U00647,Sales Associate,Retail,11-50,executive,hr_management
+U00648,Founder,Education,51-200,executive,bookkeeping
+U00649,Business Owner,Financial Services,1-10,senior,hr_management
+U00650,Sales Associate,Hospitality,500+,senior,negotiation
+U00651,Business Owner,Retail,11-50,executive,marketing
+U00652,Sales Associate,Healthcare,1-10,senior,customer_service
+U00653,Manager,Financial Services,1-10,executive,sales
+U00654,Analyst,Financial Services,51-200,entry,digital_skills
+U00655,Business Owner,Agriculture,201-500,executive,entrepreneurship
+U00656,Founder,Manufacturing,201-500,entry,strategy
+U00657,Operations Staff,Retail,500+,executive,customer_service
+U00658,Analyst,Manufacturing,500+,mid,negotiation
+U00659,Sales Associate,Manufacturing,1-10,executive,entrepreneurship
+U00660,Founder,Technology,500+,executive,digital_skills
+U00661,Founder,Financial Services,51-200,executive,hr_management
+U00662,Team Lead,Education,11-50,mid,digital_skills
+U00663,Founder,Hospitality,500+,senior,negotiation
+U00664,Operations Staff,Financial Services,11-50,mid,customer_service
+U00665,Operations Staff,Hospitality,51-200,mid,negotiation
+U00666,Operations Staff,Manufacturing,500+,senior,negotiation
+U00667,Business Owner,Technology,500+,executive,customer_service
+U00668,Founder,Healthcare,500+,senior,digital_skills
+U00669,Sales Associate,Retail,500+,entry,financial_planning
+U00670,Analyst,Manufacturing,1-10,entry,sales
+U00671,Team Lead,Manufacturing,51-200,senior,marketing
+U00672,Sales Associate,Retail,51-200,mid,strategy
+U00673,Business Owner,Technology,201-500,entry,customer_service
+U00674,Sales Associate,Financial Services,500+,executive,sales
+U00675,Founder,Hospitality,1-10,executive,digital_skills
+U00676,Analyst,Technology,500+,entry,financial_planning
+U00677,Operations Staff,Hospitality,11-50,executive,sales
+U00678,Operations Staff,Technology,500+,mid,negotiation
+U00679,Manager,Hospitality,201-500,mid,entrepreneurship
+U00680,Business Owner,Manufacturing,11-50,entry,digital_skills
+U00681,Business Owner,Healthcare,51-200,senior,marketing
+U00682,Manager,Hospitality,1-10,senior,operations
+U00683,Operations Staff,Manufacturing,1-10,mid,hr_management
+U00684,Founder,Retail,500+,senior,operations
+U00685,Sales Associate,Technology,1-10,senior,strategy
+U00686,Manager,Manufacturing,500+,entry,strategy
+U00687,Manager,Healthcare,500+,executive,bookkeeping
+U00688,Team Lead,Financial Services,11-50,senior,hr_management
+U00689,Team Lead,Hospitality,11-50,executive,strategy
+U00690,Sales Associate,Retail,1-10,senior,operations
+U00691,Manager,Financial Services,1-10,senior,digital_skills
+U00692,Sales Associate,Agriculture,201-500,senior,strategy
+U00693,Operations Staff,Hospitality,1-10,senior,strategy
+U00694,Sales Associate,Education,201-500,entry,leadership
+U00695,Operations Staff,Financial Services,51-200,entry,bookkeeping
+U00696,Manager,Retail,1-10,mid,entrepreneurship
+U00697,Operations Staff,Financial Services,201-500,entry,sales
+U00698,Founder,Healthcare,1-10,mid,financial_planning
+U00699,Analyst,Technology,1-10,entry,bookkeeping
+U00700,Business Owner,Manufacturing,51-200,entry,customer_service
+U00701,Sales Associate,Financial Services,51-200,executive,digital_skills
+U00702,Analyst,Healthcare,201-500,senior,financial_planning
+U00703,Analyst,Agriculture,500+,entry,entrepreneurship
+U00704,Operations Staff,Agriculture,500+,entry,negotiation
+U00705,Sales Associate,Agriculture,51-200,entry,leadership
+U00706,Sales Associate,Hospitality,500+,entry,leadership
+U00707,Sales Associate,Education,201-500,executive,entrepreneurship
+U00708,Business Owner,Education,11-50,mid,marketing
+U00709,Operations Staff,Healthcare,500+,senior,entrepreneurship
+U00710,Manager,Hospitality,51-200,entry,strategy
+U00711,Sales Associate,Manufacturing,1-10,entry,financial_planning
+U00712,Founder,Healthcare,500+,entry,leadership
+U00713,Manager,Technology,11-50,executive,entrepreneurship
+U00714,Sales Associate,Manufacturing,11-50,mid,sales
+U00715,Founder,Hospitality,11-50,entry,marketing
+U00716,Operations Staff,Retail,500+,executive,entrepreneurship
+U00717,Founder,Agriculture,51-200,entry,leadership
+U00718,Business Owner,Financial Services,500+,executive,hr_management
+U00719,Team Lead,Manufacturing,11-50,entry,leadership
+U00720,Founder,Agriculture,11-50,senior,operations
+U00721,Analyst,Technology,500+,senior,negotiation
+U00722,Founder,Manufacturing,500+,senior,hr_management
+U00723,Analyst,Manufacturing,1-10,senior,sales
+U00724,Sales Associate,Financial Services,201-500,senior,hr_management
+U00725,Manager,Technology,201-500,executive,operations
+U00726,Team Lead,Hospitality,201-500,entry,marketing
+U00727,Operations Staff,Agriculture,51-200,mid,strategy
+U00728,Manager,Hospitality,1-10,entry,financial_planning
+U00729,Sales Associate,Retail,500+,executive,customer_service
+U00730,Manager,Retail,500+,senior,strategy
+U00731,Founder,Education,11-50,senior,digital_skills
+U00732,Manager,Hospitality,11-50,executive,strategy
+U00733,Founder,Agriculture,201-500,senior,strategy
+U00734,Business Owner,Financial Services,500+,mid,strategy
+U00735,Manager,Education,11-50,mid,customer_service
+U00736,Founder,Manufacturing,201-500,senior,financial_planning
+U00737,Manager,Education,11-50,entry,leadership
+U00738,Team Lead,Financial Services,1-10,mid,strategy
+U00739,Sales Associate,Technology,201-500,executive,operations
+U00740,Business Owner,Retail,51-200,entry,negotiation
+U00741,Founder,Hospitality,51-200,mid,digital_skills
+U00742,Operations Staff,Healthcare,51-200,entry,strategy
+U00743,Team Lead,Healthcare,11-50,executive,hr_management
+U00744,Sales Associate,Technology,201-500,executive,customer_service
+U00745,Business Owner,Manufacturing,201-500,mid,sales
+U00746,Business Owner,Hospitality,11-50,mid,marketing
+U00747,Manager,Technology,500+,entry,entrepreneurship
+U00748,Manager,Healthcare,51-200,entry,operations
+U00749,Operations Staff,Education,201-500,mid,customer_service
+U00750,Manager,Healthcare,1-10,mid,financial_planning
+U00751,Manager,Manufacturing,11-50,entry,customer_service
+U00752,Manager,Retail,11-50,senior,marketing
+U00753,Founder,Healthcare,500+,entry,negotiation
+U00754,Operations Staff,Hospitality,1-10,mid,operations
+U00755,Founder,Education,201-500,mid,sales
+U00756,Sales Associate,Healthcare,500+,mid,customer_service
+U00757,Sales Associate,Manufacturing,500+,senior,marketing
+U00758,Operations Staff,Technology,201-500,entry,sales
+U00759,Analyst,Healthcare,11-50,entry,financial_planning
+U00760,Manager,Healthcare,11-50,entry,marketing
+U00761,Analyst,Retail,500+,entry,bookkeeping
+U00762,Analyst,Manufacturing,500+,entry,entrepreneurship
+U00763,Operations Staff,Healthcare,500+,executive,hr_management
+U00764,Sales Associate,Retail,500+,executive,sales
+U00765,Sales Associate,Education,201-500,senior,customer_service
+U00766,Sales Associate,Agriculture,201-500,mid,leadership
+U00767,Analyst,Financial Services,1-10,senior,customer_service
+U00768,Founder,Healthcare,51-200,mid,financial_planning
+U00769,Operations Staff,Retail,500+,entry,strategy
+U00770,Business Owner,Healthcare,11-50,senior,digital_skills
+U00771,Team Lead,Agriculture,11-50,executive,entrepreneurship
+U00772,Founder,Hospitality,51-200,executive,customer_service
+U00773,Team Lead,Hospitality,201-500,mid,digital_skills
+U00774,Founder,Education,11-50,senior,strategy
+U00775,Founder,Education,51-200,senior,customer_service
+U00776,Team Lead,Healthcare,11-50,entry,negotiation
+U00777,Manager,Education,11-50,entry,sales
+U00778,Founder,Healthcare,51-200,entry,marketing
+U00779,Analyst,Retail,1-10,mid,operations
+U00780,Founder,Healthcare,1-10,entry,leadership
+U00781,Manager,Technology,1-10,entry,negotiation
+U00782,Analyst,Healthcare,500+,senior,negotiation
+U00783,Founder,Retail,11-50,executive,operations
+U00784,Business Owner,Financial Services,500+,senior,sales
+U00785,Business Owner,Financial Services,500+,mid,entrepreneurship
+U00786,Business Owner,Technology,11-50,entry,marketing
+U00787,Business Owner,Hospitality,201-500,senior,entrepreneurship
+U00788,Analyst,Healthcare,500+,mid,strategy
+U00789,Business Owner,Agriculture,1-10,senior,negotiation
+U00790,Sales Associate,Technology,51-200,senior,sales
+U00791,Founder,Financial Services,201-500,executive,customer_service
+U00792,Business Owner,Hospitality,11-50,executive,strategy
+U00793,Business Owner,Agriculture,500+,senior,hr_management
+U00794,Business Owner,Hospitality,500+,senior,negotiation
+U00795,Analyst,Healthcare,500+,executive,sales
+U00796,Sales Associate,Technology,201-500,executive,customer_service
+U00797,Sales Associate,Retail,201-500,entry,leadership
+U00798,Business Owner,Healthcare,11-50,mid,hr_management
+U00799,Analyst,Technology,500+,entry,negotiation
+U00800,Sales Associate,Hospitality,11-50,senior,bookkeeping
+U00801,Analyst,Technology,1-10,mid,operations
+U00802,Team Lead,Technology,11-50,senior,marketing
+U00803,Operations Staff,Financial Services,201-500,mid,sales
+U00804,Operations Staff,Financial Services,51-200,mid,sales
+U00805,Manager,Financial Services,500+,senior,marketing
+U00806,Sales Associate,Agriculture,1-10,entry,entrepreneurship
+U00807,Operations Staff,Education,500+,entry,strategy
+U00808,Business Owner,Education,51-200,senior,operations
+U00809,Founder,Hospitality,201-500,mid,strategy
+U00810,Team Lead,Healthcare,11-50,mid,financial_planning
+U00811,Founder,Healthcare,201-500,entry,strategy
+U00812,Team Lead,Healthcare,11-50,executive,bookkeeping
+U00813,Operations Staff,Education,51-200,entry,financial_planning
+U00814,Operations Staff,Financial Services,201-500,entry,hr_management
+U00815,Team Lead,Hospitality,11-50,senior,sales
+U00816,Team Lead,Education,500+,senior,hr_management
+U00817,Manager,Education,201-500,mid,digital_skills
+U00818,Operations Staff,Technology,51-200,executive,leadership
+U00819,Analyst,Manufacturing,500+,mid,customer_service
+U00820,Operations Staff,Financial Services,1-10,senior,sales
+U00821,Founder,Healthcare,201-500,mid,marketing
+U00822,Sales Associate,Manufacturing,201-500,entry,marketing
+U00823,Analyst,Education,11-50,senior,operations
+U00824,Team Lead,Hospitality,500+,entry,digital_skills
+U00825,Business Owner,Manufacturing,1-10,mid,leadership
+U00826,Analyst,Agriculture,201-500,senior,leadership
+U00827,Team Lead,Technology,500+,senior,hr_management
+U00828,Business Owner,Healthcare,1-10,senior,entrepreneurship
+U00829,Founder,Financial Services,500+,mid,leadership
+U00830,Team Lead,Technology,500+,executive,negotiation
+U00831,Analyst,Agriculture,201-500,senior,operations
+U00832,Operations Staff,Manufacturing,11-50,senior,digital_skills
+U00833,Operations Staff,Healthcare,1-10,entry,marketing
+U00834,Team Lead,Financial Services,51-200,senior,entrepreneurship
+U00835,Team Lead,Hospitality,500+,executive,leadership
+U00836,Analyst,Technology,500+,executive,digital_skills
+U00837,Manager,Manufacturing,1-10,mid,negotiation
+U00838,Manager,Hospitality,1-10,mid,marketing
+U00839,Analyst,Agriculture,1-10,entry,operations
+U00840,Founder,Retail,1-10,executive,strategy
+U00841,Sales Associate,Agriculture,1-10,senior,customer_service
+U00842,Manager,Agriculture,201-500,senior,sales
+U00843,Manager,Hospitality,201-500,mid,marketing
+U00844,Founder,Manufacturing,1-10,entry,entrepreneurship
+U00845,Team Lead,Technology,201-500,executive,strategy
+U00846,Team Lead,Education,11-50,mid,customer_service
+U00847,Founder,Education,500+,executive,strategy
+U00848,Operations Staff,Hospitality,51-200,executive,strategy
+U00849,Manager,Agriculture,201-500,senior,hr_management
+U00850,Analyst,Hospitality,11-50,senior,financial_planning
+U00851,Business Owner,Manufacturing,51-200,senior,operations
+U00852,Founder,Retail,201-500,executive,leadership
+U00853,Business Owner,Healthcare,51-200,mid,financial_planning
+U00854,Founder,Technology,11-50,executive,strategy
+U00855,Analyst,Healthcare,11-50,mid,negotiation
+U00856,Operations Staff,Healthcare,201-500,mid,leadership
+U00857,Business Owner,Healthcare,11-50,senior,leadership
+U00858,Operations Staff,Hospitality,201-500,mid,bookkeeping
+U00859,Manager,Manufacturing,51-200,entry,entrepreneurship
+U00860,Analyst,Education,51-200,executive,sales
+U00861,Team Lead,Retail,11-50,entry,strategy
+U00862,Business Owner,Manufacturing,1-10,senior,leadership
+U00863,Manager,Education,1-10,mid,bookkeeping
+U00864,Manager,Retail,201-500,mid,hr_management
+U00865,Analyst,Hospitality,201-500,senior,operations
+U00866,Operations Staff,Retail,51-200,entry,marketing
+U00867,Business Owner,Hospitality,201-500,entry,strategy
+U00868,Analyst,Manufacturing,11-50,senior,digital_skills
+U00869,Sales Associate,Retail,1-10,mid,digital_skills
+U00870,Sales Associate,Education,11-50,entry,sales
+U00871,Analyst,Agriculture,500+,mid,operations
+U00872,Analyst,Hospitality,51-200,mid,entrepreneurship
+U00873,Operations Staff,Retail,500+,entry,leadership
+U00874,Analyst,Hospitality,11-50,senior,financial_planning
+U00875,Sales Associate,Financial Services,1-10,mid,entrepreneurship
+U00876,Analyst,Technology,1-10,mid,leadership
+U00877,Founder,Agriculture,201-500,mid,financial_planning
+U00878,Business Owner,Education,500+,mid,hr_management
+U00879,Sales Associate,Agriculture,11-50,mid,operations
+U00880,Business Owner,Technology,1-10,entry,hr_management
+U00881,Operations Staff,Manufacturing,500+,entry,marketing
+U00882,Analyst,Financial Services,51-200,senior,operations
+U00883,Operations Staff,Financial Services,1-10,executive,hr_management
+U00884,Operations Staff,Manufacturing,51-200,entry,operations
+U00885,Operations Staff,Education,500+,senior,strategy
+U00886,Operations Staff,Education,11-50,mid,strategy
+U00887,Team Lead,Technology,201-500,senior,customer_service
+U00888,Sales Associate,Manufacturing,1-10,mid,operations
+U00889,Team Lead,Hospitality,500+,senior,operations
+U00890,Business Owner,Healthcare,11-50,entry,customer_service
+U00891,Sales Associate,Technology,500+,mid,hr_management
+U00892,Operations Staff,Agriculture,500+,executive,sales
+U00893,Founder,Education,500+,mid,customer_service
+U00894,Team Lead,Technology,201-500,senior,bookkeeping
+U00895,Business Owner,Agriculture,1-10,mid,marketing
+U00896,Sales Associate,Retail,11-50,entry,operations
+U00897,Manager,Agriculture,1-10,executive,entrepreneurship
+U00898,Analyst,Hospitality,1-10,senior,sales
+U00899,Founder,Agriculture,1-10,mid,entrepreneurship
+U00900,Analyst,Agriculture,201-500,entry,hr_management
+U00901,Founder,Healthcare,51-200,entry,customer_service
+U00902,Team Lead,Retail,1-10,senior,bookkeeping
+U00903,Manager,Agriculture,1-10,mid,strategy
+U00904,Analyst,Financial Services,11-50,mid,customer_service
+U00905,Operations Staff,Manufacturing,500+,executive,negotiation
+U00906,Business Owner,Technology,201-500,executive,bookkeeping
+U00907,Manager,Manufacturing,500+,executive,strategy
+U00908,Team Lead,Manufacturing,500+,executive,hr_management
+U00909,Team Lead,Technology,51-200,executive,entrepreneurship
+U00910,Analyst,Technology,500+,mid,customer_service
+U00911,Founder,Financial Services,201-500,senior,hr_management
+U00912,Analyst,Education,201-500,entry,negotiation
+U00913,Business Owner,Hospitality,500+,entry,strategy
+U00914,Manager,Hospitality,1-10,senior,sales
+U00915,Manager,Technology,1-10,senior,strategy
+U00916,Founder,Manufacturing,1-10,entry,operations
+U00917,Team Lead,Manufacturing,11-50,senior,hr_management
+U00918,Founder,Financial Services,11-50,senior,leadership
+U00919,Business Owner,Healthcare,500+,mid,negotiation
+U00920,Business Owner,Technology,201-500,mid,operations
+U00921,Sales Associate,Agriculture,500+,senior,financial_planning
+U00922,Operations Staff,Healthcare,1-10,entry,hr_management
+U00923,Team Lead,Healthcare,201-500,entry,sales
+U00924,Operations Staff,Retail,201-500,entry,leadership
+U00925,Founder,Retail,51-200,mid,hr_management
+U00926,Founder,Financial Services,11-50,entry,entrepreneurship
+U00927,Operations Staff,Healthcare,201-500,entry,sales
+U00928,Analyst,Hospitality,201-500,mid,marketing
+U00929,Team Lead,Agriculture,201-500,entry,strategy
+U00930,Analyst,Hospitality,1-10,executive,strategy
+U00931,Analyst,Manufacturing,11-50,executive,strategy
+U00932,Manager,Education,201-500,mid,strategy
+U00933,Founder,Financial Services,11-50,entry,leadership
+U00934,Sales Associate,Healthcare,51-200,entry,bookkeeping
+U00935,Operations Staff,Healthcare,201-500,senior,hr_management
+U00936,Manager,Technology,51-200,entry,leadership
+U00937,Manager,Technology,500+,executive,customer_service
+U00938,Manager,Education,1-10,mid,sales
+U00939,Operations Staff,Technology,11-50,entry,bookkeeping
+U00940,Operations Staff,Retail,11-50,mid,leadership
+U00941,Business Owner,Technology,1-10,senior,operations
+U00942,Analyst,Retail,51-200,mid,negotiation
+U00943,Founder,Financial Services,11-50,senior,strategy
+U00944,Analyst,Manufacturing,1-10,executive,customer_service
+U00945,Operations Staff,Retail,51-200,mid,financial_planning
+U00946,Team Lead,Financial Services,500+,senior,financial_planning
+U00947,Analyst,Retail,1-10,executive,entrepreneurship
+U00948,Team Lead,Technology,1-10,entry,leadership
+U00949,Sales Associate,Healthcare,11-50,executive,strategy
+U00950,Operations Staff,Agriculture,51-200,executive,customer_service
+U00951,Founder,Agriculture,11-50,mid,strategy
+U00952,Analyst,Retail,1-10,mid,strategy
+U00953,Team Lead,Technology,201-500,executive,negotiation
+U00954,Manager,Retail,51-200,senior,hr_management
+U00955,Operations Staff,Hospitality,11-50,senior,financial_planning
+U00956,Operations Staff,Hospitality,201-500,entry,strategy
+U00957,Team Lead,Financial Services,11-50,senior,digital_skills
+U00958,Operations Staff,Manufacturing,1-10,executive,strategy
+U00959,Operations Staff,Financial Services,201-500,mid,customer_service
+U00960,Manager,Healthcare,51-200,senior,operations
+U00961,Founder,Manufacturing,11-50,mid,customer_service
+U00962,Founder,Financial Services,11-50,senior,negotiation
+U00963,Operations Staff,Manufacturing,201-500,mid,entrepreneurship
+U00964,Founder,Manufacturing,51-200,entry,strategy
+U00965,Founder,Agriculture,11-50,senior,marketing
+U00966,Operations Staff,Retail,51-200,executive,digital_skills
+U00967,Team Lead,Education,51-200,mid,sales
+U00968,Business Owner,Manufacturing,11-50,entry,customer_service
+U00969,Founder,Hospitality,500+,mid,customer_service
+U00970,Manager,Financial Services,1-10,senior,bookkeeping
+U00971,Operations Staff,Education,11-50,executive,negotiation
+U00972,Operations Staff,Technology,11-50,executive,operations
+U00973,Analyst,Manufacturing,11-50,mid,sales
+U00974,Business Owner,Healthcare,1-10,senior,digital_skills
+U00975,Manager,Financial Services,11-50,entry,marketing
+U00976,Analyst,Education,51-200,executive,sales
+U00977,Analyst,Healthcare,1-10,executive,negotiation
+U00978,Team Lead,Healthcare,500+,entry,strategy
+U00979,Business Owner,Education,201-500,entry,sales
+U00980,Founder,Healthcare,1-10,executive,strategy
+U00981,Sales Associate,Retail,11-50,senior,operations
+U00982,Analyst,Hospitality,51-200,executive,marketing
+U00983,Analyst,Hospitality,500+,entry,negotiation
+U00984,Founder,Manufacturing,201-500,executive,bookkeeping
+U00985,Operations Staff,Agriculture,11-50,mid,digital_skills
+U00986,Analyst,Technology,201-500,entry,marketing
+U00987,Analyst,Financial Services,201-500,entry,leadership
+U00988,Team Lead,Manufacturing,1-10,entry,bookkeeping
+U00989,Operations Staff,Education,51-200,entry,strategy
+U00990,Operations Staff,Healthcare,500+,mid,digital_skills
+U00991,Founder,Healthcare,1-10,mid,hr_management
+U00992,Founder,Manufacturing,11-50,mid,marketing
+U00993,Sales Associate,Retail,201-500,senior,leadership
+U00994,Operations Staff,Education,51-200,mid,bookkeeping
+U00995,Manager,Financial Services,1-10,senior,financial_planning
+U00996,Analyst,Education,201-500,entry,customer_service
+U00997,Analyst,Financial Services,11-50,executive,operations
+U00998,Analyst,Education,1-10,entry,sales
+U00999,Founder,Hospitality,500+,mid,financial_planning
+U01000,Manager,Manufacturing,1-10,senior,financial_planning
