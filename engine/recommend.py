@@ -35,7 +35,7 @@ def get_recommendations(
     for _, course in candidates.iterrows():
         signal_scores = {
             "survey": signals.survey_signal(course, survey_row),
-            "usage": signals.usage_signal(course, user_id, usage_events),
+            "usage": signals.usage_signal(course, user_id, usage_events, courses),
             "work_info": signals.work_info_signal(course, user_row),
         }
         score, reason = weighting.combine_signals(signal_scores)
