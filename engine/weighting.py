@@ -29,27 +29,35 @@ def combine_signals(
     signals: dict[str, Signal],
     weights: dict[str, float] = DEFAULT_WEIGHTS,
 ) -> tuple[float, str]:
-    """TODO (you implement).
-
-    `signals` is e.g. {"survey": (0.8, "..."), "usage": (0.0, None),
-    "work_info": (0.3, "...")}.
-
-    Two decisions to make explicitly (don't let them happen by accident):
-
-    1. Cold start / missing data: if a signal's reason is None (the signal
-       didn't fire -- e.g. no usage_events, no survey_response), does its
-       weight silently vanish (mass moves to the other signals via
-       renormalization), or does it count as a real 0 (penalizing the
-       user for missing data)? These give very different results for a
-       brand-new user. The case study explicitly asks how you handle the
-       cold-start -> behavior-driven transition -- this is where you answer
-       that, in code, not just in prose.
-
-    2. Reason string: build ONE human-readable sentence from whichever
-       signal(s) contributed most, e.g. "Because you told us you want to
-       improve at financial planning and finished Intro to Bookkeeping, we
-       suggest...". Don't just concatenate all three reason fragments --
-       pick the strongest 1-2 and make it read like a sentence, per the
-       case study's own example in section 1.
+    """Weighted blend of the three signals, with renormalization for
+    cold-start. A signal with reason=None didn't fire -- by construction in
+    engine/signals.py that covers both "no data" and "data but no overlap,"
+    so its weight is dropped and redistributed across whichever signals did
+    fire, rather than counted as a real zero that would double-punish
+    users for missing data. The final reason is built from the 1-2
+    highest-scoring signals that fired, not a concatenation of all three.
     """
-    raise NotImplementedError("combine_signals: implement weighting + cold-start renormalization")
+    priority = list(weights)  # tie-break order when scores are equal
+    active = {
+        name: signals[name]
+        for name in priority
+        if name in signals and signals[name][1] is not None
+    }
+
+    if not active:
+        return (0.0, "We don't have enough information about you yet, so this is a general starting point.")
+
+    active_weight_total = sum(weights[name] for name in active)
+    blended_score = sum(
+        score * weights[name] for name, (score, _reason) in active.items()
+    ) / active_weight_total
+
+    ranked = sorted(active, key=lambda name: (-active[name][0], priority.index(name)))
+    top_reasons = [active[name][1] for name in ranked[:2]]
+
+    if len(top_reasons) == 1:
+        reason = f"Because {top_reasons[0]}, we suggest this course."
+    else:
+        reason = f"Because {top_reasons[0]}, and {top_reasons[1]}, we suggest this course."
+
+    return (round(blended_score, 2), reason)
