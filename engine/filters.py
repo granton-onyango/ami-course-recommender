@@ -7,6 +7,15 @@ Case study capability #3 ("Sensible filtering") lives here.
 
 import pandas as pd
 
+from taxonomy import LEVELS
+
+SENIORITY_LEVEL_CAP = {
+    "entry": "beginner",
+    "mid": "intermediate",
+    "senior": "advanced",
+    "executive": "advanced",
+}
+
 
 def get_completed_course_ids(user_id: str, usage_events: pd.DataFrame) -> set[str]:
     """Fully implemented -- mechanical, not a judgment call.
@@ -27,35 +36,42 @@ def exclude_completed(courses: pd.DataFrame, completed_course_ids: set[str]) -> 
 def apply_prerequisite_filter(
     candidates: pd.DataFrame, user_id: str, usage_events: pd.DataFrame
 ) -> pd.DataFrame:
-    """TODO (you implement).
-
-    `candidates["prerequisites"]` holds a course_id string, or "" if there's
-    no prerequisite. Decide:
-      - Hard-block a course if its prerequisite hasn't been completed? Or
-        allow it through with a lower score / caveat in the reason?
-      - What counts as "satisfied" -- only 'completed', or does 'started'
-        with high progress_pct count too?
-
-    There's no single right answer -- pick one, and be ready to defend it.
-    `get_completed_course_ids()` above is probably useful here.
-    """
-    raise NotImplementedError("apply_prerequisite_filter: implement your prerequisite policy")
+    """Hard filter. A course with a prerequisite is only shown once that
+    prerequisite has a 'completed' event -- 'started', however far along,
+    doesn't count. Courses with no prerequisite ("") always pass."""
+    completed = get_completed_course_ids(user_id, usage_events)
+    no_prerequisite = candidates["prerequisites"] == ""
+    prerequisite_met = candidates["prerequisites"].isin(completed)
+    return candidates[no_prerequisite | prerequisite_met]
 
 
 def apply_level_filter(
-    candidates: pd.DataFrame, user_row: pd.Series, usage_events: pd.DataFrame
+    candidates: pd.DataFrame,
+    user_row: pd.Series,
+    usage_events: pd.DataFrame,
+    courses: pd.DataFrame,
 ) -> pd.DataFrame:
-    """TODO (you implement).
+    """Hard filter. Within a topic, a course at level L is only shown once
+    the user has completed a course one level below L in that same topic
+    (e.g. one completed 'beginner' unlocks 'intermediate'). For a topic
+    where the user has zero completions, there's no behavioral signal to
+    check, so fall back to a cap implied by their seniority (SENIORITY_LEVEL_CAP)
+    instead of either blocking everything or letting everything through."""
+    level_rank = {level: i for i, level in enumerate(LEVELS)}
 
-    This is directly the bug scenario the AMI interview asks about:
-    "A program manager says entry-level users are getting advanced courses.
-    How would you debug and fix that?"
+    completed_ids = get_completed_course_ids(user_row["user_id"], usage_events)
+    completed_courses = courses[courses["course_id"].isin(completed_ids)]
+    topic_max_rank = completed_courses.groupby("topic")["level"].apply(
+        lambda levels: max(level_rank[level] for level in levels)
+    ).to_dict()
 
-    Decide: hard filter (never show 'advanced' to a user with no completed
-    intermediate courses in that topic) vs. soft penalty (let it through but
-    score it lower)? A hard filter is easier to defend and debug; a soft
-    penalty is more flexible but can still let bad recommendations slip to
-    the top if other signals are strong enough. State your choice in
-    WRITEUP.md -- the interview will probe exactly this tradeoff.
-    """
-    raise NotImplementedError("apply_level_filter: implement your level-appropriateness policy")
+    seniority_cap_rank = level_rank[SENIORITY_LEVEL_CAP.get(user_row["seniority"], "beginner")]
+
+    def is_allowed(row) -> bool:
+        if row["topic"] in topic_max_rank:
+            max_rank = min(topic_max_rank[row["topic"]] + 1, len(LEVELS) - 1)
+        else:
+            max_rank = seniority_cap_rank
+        return level_rank[row["level"]] <= max_rank
+
+    return candidates[candidates.apply(is_allowed, axis=1)]
