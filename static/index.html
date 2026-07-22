@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AMI Course Recommendations</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    max-width: 720px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    color: #1a1a1a;
+    background: #fafafa;
+  }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1rem; margin: 1.5rem 0 0.5rem; }
+  p.sub { color: #666; margin-top: 0; margin-bottom: 2rem; }
+  form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  input#user_id { flex: 1; min-width: 140px; }
+  input#n { width: 60px; }
+  button {
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    background: #1a1a1a;
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  button:hover { background: #333; }
+
+  .tabs { display: flex; gap: 0.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid #e0e0e0; }
+  .tab-btn {
+    background: none; color: #666; border-radius: 0;
+    padding: 0.5rem 0.9rem; font-size: 0.9rem;
+    border-bottom: 2px solid transparent;
+  }
+  .tab-btn:hover { background: #f0f0f0; }
+  .tab-btn.active { color: #1a1a1a; border-bottom-color: #1a1a1a; font-weight: 600; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+  }
+  .card .rank { color: #999; font-size: 0.85rem; margin-right: 0.5rem; }
+  .card .title { font-weight: 600; }
+  .card .score {
+    font-family: ui-monospace, monospace;
+    background: #f0f0f0;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+  .card .reason { color: #444; font-size: 0.9rem; line-height: 1.4; }
+  .status { color: #666; font-size: 0.9rem; }
+  .error { color: #b00020; font-size: 0.9rem; }
+
+  .survey-box, .funnel-box {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .survey-box dl { margin: 0; }
+  .survey-box dt { color: #666; font-size: 0.8rem; margin-top: 0.5rem; }
+  .survey-box dt:first-child { margin-top: 0; }
+  .survey-box dd { margin: 0; }
+
+  .funnel-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
+  .funnel-label { width: 190px; flex-shrink: 0; color: #444; }
+  .funnel-bar-track { flex: 1; background: #eee; border-radius: 4px; height: 10px; overflow: hidden; }
+  .funnel-bar-fill { background: #1a1a1a; height: 100%; }
+  .funnel-count { width: 40px; text-align: right; font-family: ui-monospace, monospace; font-size: 0.85rem; }
+
+  .weights { color: #666; font-size: 0.85rem; margin-bottom: 1rem; }
+
+  table.breakdown { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  table.breakdown th, table.breakdown td {
+    text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #eee; vertical-align: top;
+  }
+  table.breakdown th { color: #666; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; }
+  table.breakdown .signal-score { font-family: ui-monospace, monospace; }
+  table.breakdown .signal-reason { color: #777; font-size: 0.78rem; display: block; margin-top: 0.15rem; }
+  table.breakdown .final-score { font-family: ui-monospace, monospace; font-weight: 600; }
+  table.breakdown .na { color: #ccc; }
+
+  #ai-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+  #ai-question { flex: 1; padding: 0.5rem 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95rem; }
+  .ai-answer {
+    background: white; border: 1px solid #e5e5e5; border-radius: 8px;
+    padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.5;
+  }
+  .ai-answer h1, .ai-answer h2, .ai-answer h3 { margin: 1rem 0 0.4rem; font-size: 1rem; }
+  .ai-answer h1:first-child, .ai-answer h2:first-child, .ai-answer h3:first-child { margin-top: 0; }
+  .ai-answer p { margin: 0.5rem 0; }
+  .ai-answer ul, .ai-answer ol { margin: 0.5rem 0; padding-left: 1.25rem; }
+  .ai-answer code {
+    background: #f0f0f0; padding: 0.1rem 0.35rem; border-radius: 4px;
+    font-family: ui-monospace, monospace; font-size: 0.85rem;
+  }
+  .ai-answer pre { background: #f0f0f0; padding: 0.75rem; border-radius: 6px; overflow-x: auto; }
+  .ai-answer pre code { background: none; padding: 0; }
+</style>
+</head>
+<body>
+
+<h1>AMI Course Recommendations</h1>
+<p class="sub">Enter a user_id (e.g. U00001) to see their top recommended courses.</p>
+
+<form id="lookup-form">
+  <input id="user_id" type="text" placeholder="user_id, e.g. U00001" required>
+  <input id="n" type="number" value="5" min="1" max="20">
+  <button type="submit">Get recommendations</button>
+</form>
+
+<div class="tabs">
+  <button type="button" class="tab-btn active" data-tab="recommendations">Recommendations</button>
+  <button type="button" class="tab-btn" data-tab="breakdown">Breakdown</button>
+  <button type="button" class="tab-btn" data-tab="ai">AI</button>
+</div>
+
+<div id="tab-recommendations" class="tab-panel active">
+  <div id="results"></div>
+</div>
+
+<div id="tab-breakdown" class="tab-panel">
+  <div id="breakdown"></div>
+</div>
+
+<div id="tab-ai" class="tab-panel">
+  <form id="ai-form">
+    <input id="ai-question" type="text" placeholder="e.g. why did this course score higher than the others?" required>
+    <button type="submit">Ask</button>
+  </form>
+  <div id="ai-answer"></div>
+</div>
+
+<script src="/static/marked.min.js"></script>
+<script>
+  const form = document.getElementById("lookup-form");
+  const results = document.getElementById("results");
+  const breakdownEl = document.getElementById("breakdown");
+
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById(`tab-${btn.dataset.tab}`).classList.add("active");
+    });
+  });
+
+  function renderRecommendations(data) {
+    if (data.recommendations.length === 0) {
+      results.innerHTML = '<p class="status">No recommendations found for this user.</p>';
+      return;
+    }
+    results.innerHTML = data.recommendations.map(r => `
+      <div class="card">
+        <div class="top">
+          <div><span class="rank">#${r.rank}</span><span class="title">${r.title}</span></div>
+          <div class="score">${r.score}</div>
+        </div>
+        <div class="reason">${r.reason}</div>
+      </div>
+    `).join("");
+  }
+
+  function signalCell(signal) {
+    if (signal.reason === null) {
+      return '<span class="na">&mdash;</span>';
+    }
+    return `<span class="signal-score">${signal.score}</span><span class="signal-reason">${signal.reason}</span>`;
+  }
+
+  function renderBreakdown(data) {
+    const survey = data.survey
+      ? `
+        <dl>
+          <dt>Skill gaps</dt><dd>${data.survey.skill_gaps}</dd>
+          <dt>Goals</dt><dd>${data.survey.goals}</dd>
+          <dt>Preferred topics</dt><dd>${data.survey.preferred_topics}</dd>
+          <dt>Confidence by topic</dt><dd>${data.survey.confidence_by_topic}</dd>
+        </dl>`
+      : '<p class="status">No survey on file for this user.</p>';
+
+    const maxCount = Math.max(...data.filter_funnel.map(f => f.count));
+    const funnel = data.filter_funnel.map(f => `
+      <div class="funnel-row">
+        <div class="funnel-label">${f.stage}</div>
+        <div class="funnel-bar-track"><div class="funnel-bar-fill" style="width:${(f.count / maxCount) * 100}%"></div></div>
+        <div class="funnel-count">${f.count}</div>
+      </div>
+    `).join("");
+
+    const weights = Object.entries(data.weights).map(([k, v]) => `${k}: ${v}`).join(" &middot; ");
+
+    const rows = data.courses.map(c => `
+      <tr>
+        <td>#${c.rank}<br>${c.course_id}<br>${c.title}</td>
+        <td>${signalCell(c.signals.survey)}</td>
+        <td>${signalCell(c.signals.usage)}</td>
+        <td>${signalCell(c.signals.work_info)}</td>
+        <td><span class="final-score">${c.final_score}</span><span class="signal-reason">${c.final_reason}</span></td>
+      </tr>
+    `).join("");
+
+    breakdownEl.innerHTML = `
+      <h2>Survey answers</h2>
+      <div class="survey-box">${survey}</div>
+
+      <h2>Filter funnel</h2>
+      <div class="funnel-box">${funnel}</div>
+
+      <h2>Signal weights</h2>
+      <div class="weights">${weights}</div>
+
+      <h2>Per-course signal scores</h2>
+      <table class="breakdown">
+        <thead>
+          <tr><th>Course</th><th>Survey</th><th>Usage</th><th>Work info</th><th>Final</th></tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const userId = document.getElementById("user_id").value.trim();
+    const n = document.getElementById("n").value || 5;
+
+    results.innerHTML = '<p class="status">Loading...</p>';
+    breakdownEl.innerHTML = '<p class="status">Loading...</p>';
+
+    try {
+      const [recRes, breakdownRes] = await Promise.all([
+        fetch(`/users/${encodeURIComponent(userId)}/recommendations?n=${n}`),
+        fetch(`/users/${encodeURIComponent(userId)}/breakdown?n=${n}`),
+      ]);
+      const recData = await recRes.json();
+      const breakdownData = await breakdownRes.json();
+
+      if (!recRes.ok) {
+        results.innerHTML = `<p class="error">${recData.detail || "Something went wrong."}</p>`;
+      } else {
+        renderRecommendations(recData);
+      }
+
+      if (!breakdownRes.ok) {
+        breakdownEl.innerHTML = `<p class="error">${breakdownData.detail || "Something went wrong."}</p>`;
+      } else {
+        renderBreakdown(breakdownData);
+      }
+    } catch (err) {
+      const msg = '<p class="error">Could not reach the API. Is the server running?</p>';
+      results.innerHTML = msg;
+      breakdownEl.innerHTML = msg;
+    }
+  });
+
+  const aiForm = document.getElementById("ai-form");
+  const aiAnswer = document.getElementById("ai-answer");
+
+  aiForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const userId = document.getElementById("user_id").value.trim();
+    const question = document.getElementById("ai-question").value.trim();
+    if (!userId) {
+      aiAnswer.innerHTML = '<p class="error">Enter a user_id up top first.</p>';
+      return;
+    }
+
+    aiAnswer.innerHTML = '<p class="status">Thinking...</p>';
+
+    try {
+      const res = await fetch(`/users/${encodeURIComponent(userId)}/ask`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        aiAnswer.innerHTML = `<p class="error">${data.detail || "Something went wrong."}</p>`;
+        return;
+      }
+
+      aiAnswer.innerHTML = `<div class="ai-answer">${marked.parse(data.answer)}</div>`;
+    } catch (err) {
+      aiAnswer.innerHTML = '<p class="error">Could not reach the API. Is the server running?</p>';
+    }
+  });
+</script>
+
+</body>
+</html>
