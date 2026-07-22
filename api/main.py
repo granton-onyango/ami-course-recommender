@@ -10,17 +10,23 @@ Run:
   uvicorn api.main:app --reload
 """
 
+import os
 import pathlib
 from contextlib import asynccontextmanager
 
+import anthropic
 import pandas as pd
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
-from engine.recommend import get_recommendations
-from .models import RecommendationsResponse
+from engine.recommend import get_recommendation_breakdown, get_recommendations
+from . import assistant
+from .models import AskRequest, AskResponse, BreakdownResponse, RecommendationsResponse
 
 ROOT = pathlib.Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
+STATIC_DIR = ROOT / "static"
 
 
 @asynccontextmanager
@@ -46,6 +52,13 @@ app = FastAPI(
     version="0.1.0",
     lifespan=lifespan,
 )
+
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+
+
+@app.get("/", include_in_schema=False)
+def ui():
+    return FileResponse(STATIC_DIR / "index.html")
 
 
 @app.get("/status")
@@ -79,3 +92,65 @@ def user_recommendations(user_id: str, n: int = 5):
         )
 
     return RecommendationsResponse(user_id=user_id, recommendations=recs)
+
+
+@app.get("/users/{user_id}/breakdown", response_model=BreakdownResponse)
+def user_breakdown(user_id: str, n: int = 5):
+    try:
+        breakdown = get_recommendation_breakdown(
+            user_id=user_id,
+            n=n,
+            courses=app.state.courses,
+            users=app.state.users,
+            usage_events=app.state.usage_events,
+            survey_responses=app.state.survey_responses,
+        )
+    except KeyError:
+        raise HTTPException(status_code=404, detail=f"user_id '{user_id}' not found")
+    except NotImplementedError as e:
+        raise HTTPException(
+            status_code=501,
+            detail=f"Recommendation engine not implemented yet: {e}",
+        )
+
+    return breakdown
+
+
+@app.post("/users/{user_id}/ask", response_model=AskResponse)
+def ask_assistant(user_id: str, request: AskRequest):
+    try:
+        breakdown = get_recommendation_breakdown(
+            user_id=user_id,
+            n=5,
+            courses=app.state.courses,
+            users=app.state.users,
+            usage_events=app.state.usage_events,
+            survey_responses=app.state.survey_responses,
+        )
+    except KeyError:
+        raise HTTPException(status_code=404, detail=f"user_id '{user_id}' not found")
+    except NotImplementedError as e:
+        raise HTTPException(
+            status_code=501,
+            detail=f"Recommendation engine not implemented yet: {e}",
+        )
+
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        raise HTTPException(
+            status_code=500,
+            detail="ANTHROPIC_API_KEY is missing -- copy .env.example to .env and fill it in",
+        )
+
+    try:
+        answer = assistant.ask(breakdown, request.question)
+    except anthropic.AuthenticationError:
+        raise HTTPException(
+            status_code=500,
+            detail="ANTHROPIC_API_KEY is missing or invalid -- copy .env.example to .env and fill it in",
+        )
+    except anthropic.RateLimitError:
+        raise HTTPException(status_code=429, detail="Claude API rate limit hit, try again shortly")
+    except anthropic.APIStatusError as e:
+        raise HTTPException(status_code=502, detail=f"Claude API error: {e.message}")
+
+    return AskResponse(answer=answer)
