@@ -56,3 +56,9 @@ class AskRequest(BaseModel):
 
 class AskResponse(BaseModel):
     answer: str
+
+
+class CoachResponse(BaseModel):
+    course_id: str
+    title: str
+    message: str
