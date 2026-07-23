@@ -53,3 +53,38 @@ def ask(breakdown: dict, question: str) -> str:
         messages=[{"role": "user", "content": question}],
     )
     return next(block.text for block in response.content if block.type == "text")
+
+
+def build_coach_system_prompt() -> str:
+    return (
+        "You are the AI Coach Bot on AMI's learning platform, talking directly "
+        "to a course participant. You will be given one recommended course, its "
+        "score, and the exact reason our recommendation engine computed for "
+        "recommending it. Rewrite that reason as a warm, encouraging, "
+        "second-person coaching message in 1-3 sentences -- the kind of message "
+        "the participant will actually see in the app.\n\n"
+        "Rules: do not invent facts, numbers, courses, or reasons beyond what is "
+        "given below. Only rephrase and warm the tone of the existing reason. "
+        "If it names specific topics or courses, keep them exact."
+    )
+
+
+def coach_message(course: dict) -> str:
+    """LLM bonus, applied narrowly: the score and the deterministic reason
+    below come entirely from engine/weighting.py and are never touched here
+    -- this call only rephrases that reason's tone. The recommendation logic
+    stays out of the LLM's hands; only the sentence's voice is Claude's."""
+    response = _client.messages.create(
+        model="claude-opus-4-8",
+        max_tokens=300,
+        system=build_coach_system_prompt(),
+        messages=[{
+            "role": "user",
+            "content": (
+                f"Course: {course['title']}\n"
+                f"Score: {course['score']}\n"
+                f"Reason: {course['reason']}"
+            ),
+        }],
+    )
+    return next(block.text for block in response.content if block.type == "text")
