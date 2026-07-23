@@ -3,16 +3,28 @@
 <head>
 <meta charset="utf-8">
 <title>AMI Course Recommendations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  :root {
+    /* AMI brand colors, pulled from africanmanagers.com and the case study PDF's own stripe */
+    --ami-red: #E10F24;
+    --ami-red-dark: #B80D1E;
+    --ami-orange: #EF8F20;
+    --ami-teal: #1F7776;
+    --ami-teal-dark: #1B6664;
+    --ami-teal-light: #E5F1F1;
+  }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     max-width: 720px;
     margin: 3rem auto;
     padding: 0 1.5rem;
     color: #1a1a1a;
     background: #fafafa;
   }
-  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; color: var(--ami-teal-dark); font-weight: 600; }
   h2 { font-size: 1rem; margin: 1.5rem 0 0.5rem; }
   p.sub { color: #666; margin-top: 0; margin-bottom: 2rem; }
   form {
@@ -33,22 +45,25 @@
     padding: 0.5rem 1.25rem;
     border: none;
     border-radius: 6px;
-    background: #1a1a1a;
+    background: var(--ami-red);
     color: white;
     font-size: 0.95rem;
+    font-family: inherit;
+    font-weight: 500;
     cursor: pointer;
   }
-  button:hover { background: #333; }
+  button:hover { background: var(--ami-red-dark); }
 
-  .tabs { display: flex; gap: 0.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid #e0e0e0; }
+  .tabs { display: flex; justify-content: center; gap: 0.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid #e0e0e0; }
   .tabs.sub { margin-bottom: 1rem; }
   .tab-btn, .subtab-btn {
     background: none; color: #666; border-radius: 0;
     padding: 0.5rem 0.9rem; font-size: 0.9rem;
+    font-family: inherit;
     border-bottom: 2px solid transparent;
   }
   .tab-btn:hover, .subtab-btn:hover { background: #f0f0f0; }
-  .tab-btn.active, .subtab-btn.active { color: #1a1a1a; border-bottom-color: #1a1a1a; font-weight: 600; }
+  .tab-btn.active, .subtab-btn.active { color: var(--ami-red); border-bottom-color: var(--ami-red); font-weight: 600; }
   .tab-panel, .subtab-panel { display: none; }
   .tab-panel.active, .subtab-panel.active { display: block; }
 
@@ -65,14 +80,16 @@
     align-items: baseline;
     margin-bottom: 0.35rem;
   }
-  .card .rank { color: #999; font-size: 0.85rem; margin-right: 0.5rem; }
+  .card .rank { color: var(--ami-orange); font-weight: 600; font-size: 0.85rem; margin-right: 0.5rem; }
   .card .title { font-weight: 600; }
   .card .score {
     font-family: ui-monospace, monospace;
-    background: #f0f0f0;
+    background: var(--ami-teal-light);
+    color: var(--ami-teal-dark);
     padding: 0.1rem 0.5rem;
     border-radius: 4px;
     font-size: 0.85rem;
+    font-weight: 600;
   }
   .card .reason { color: #444; font-size: 0.9rem; line-height: 1.4; }
   .status { color: #666; font-size: 0.9rem; }
@@ -94,7 +111,7 @@
   .funnel-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
   .funnel-label { width: 190px; flex-shrink: 0; color: #444; }
   .funnel-bar-track { flex: 1; background: #eee; border-radius: 4px; height: 10px; overflow: hidden; }
-  .funnel-bar-fill { background: #1a1a1a; height: 100%; }
+  .funnel-bar-fill { background: var(--ami-teal); height: 100%; }
   .funnel-count { width: 40px; text-align: right; font-family: ui-monospace, monospace; font-size: 0.85rem; }
 
   .weights { color: #666; font-size: 0.85rem; margin-bottom: 1rem; }
@@ -106,7 +123,7 @@
   table.breakdown th { color: #666; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; }
   table.breakdown .signal-score { font-family: ui-monospace, monospace; }
   table.breakdown .signal-reason { color: #777; font-size: 0.78rem; display: block; margin-top: 0.15rem; }
-  table.breakdown .final-score { font-family: ui-monospace, monospace; font-weight: 600; }
+  table.breakdown .final-score { font-family: ui-monospace, monospace; font-weight: 600; color: var(--ami-teal-dark); }
   table.breakdown .na { color: #ccc; }
 
   #ai-form, #coach-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
