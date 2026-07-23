@@ -41,15 +41,16 @@
   button:hover { background: #333; }
 
   .tabs { display: flex; gap: 0.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid #e0e0e0; }
-  .tab-btn {
+  .tabs.sub { margin-bottom: 1rem; }
+  .tab-btn, .subtab-btn {
     background: none; color: #666; border-radius: 0;
     padding: 0.5rem 0.9rem; font-size: 0.9rem;
     border-bottom: 2px solid transparent;
   }
-  .tab-btn:hover { background: #f0f0f0; }
-  .tab-btn.active { color: #1a1a1a; border-bottom-color: #1a1a1a; font-weight: 600; }
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
+  .tab-btn:hover, .subtab-btn:hover { background: #f0f0f0; }
+  .tab-btn.active, .subtab-btn.active { color: #1a1a1a; border-bottom-color: #1a1a1a; font-weight: 600; }
+  .tab-panel, .subtab-panel { display: none; }
+  .tab-panel.active, .subtab-panel.active { display: block; }
 
   .card {
     background: white;
@@ -108,8 +109,10 @@
   table.breakdown .final-score { font-family: ui-monospace, monospace; font-weight: 600; }
   table.breakdown .na { color: #ccc; }
 
-  #ai-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-  #ai-question { flex: 1; padding: 0.5rem 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95rem; }
+  #ai-form, #coach-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+  #ai-question, #coach-course {
+    flex: 1; padding: 0.5rem 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95rem;
+  }
   .ai-answer {
     background: white; border: 1px solid #e5e5e5; border-radius: 8px;
     padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.5;
@@ -152,11 +155,30 @@
 </div>
 
 <div id="tab-ai" class="tab-panel">
-  <form id="ai-form">
-    <input id="ai-question" type="text" placeholder="e.g. why did this course score higher than the others?" required>
-    <button type="submit">Ask</button>
-  </form>
-  <div id="ai-answer"></div>
+  <div class="tabs sub">
+    <button type="button" class="subtab-btn active" data-subtab="ask">Ask a question</button>
+    <button type="button" class="subtab-btn" data-subtab="coach">Coaching message</button>
+  </div>
+
+  <div id="subtab-ask" class="subtab-panel active">
+    <p class="sub" style="margin-bottom: 0.75rem;">Free-form Q&amp;A over this user's breakdown data -- never touches the recommendation scores or reasons themselves.</p>
+    <form id="ai-form">
+      <input id="ai-question" type="text" placeholder="e.g. why did this course score higher than the others?" required>
+      <button type="submit">Ask</button>
+    </form>
+    <div id="ai-answer"></div>
+  </div>
+
+  <div id="subtab-coach" class="subtab-panel">
+    <p class="sub" style="margin-bottom: 0.75rem;">Rewrites one recommendation's existing score + reason as a warm coaching message -- the LLM bonus, applied only to phrasing, not to the underlying decision. Fetch recommendations above first.</p>
+    <form id="coach-form">
+      <select id="coach-course" required>
+        <option value="">Fetch recommendations above first...</option>
+      </select>
+      <button type="submit">Get coaching message</button>
+    </form>
+    <div id="coach-answer"></div>
+  </div>
 </div>
 
 <script src="/static/marked.min.js"></script>
@@ -173,6 +195,26 @@
       document.getElementById(`tab-${btn.dataset.tab}`).classList.add("active");
     });
   });
+
+  document.querySelectorAll(".subtab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".subtab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".subtab-panel").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById(`subtab-${btn.dataset.subtab}`).classList.add("active");
+    });
+  });
+
+  function populateCoachDropdown(recommendations) {
+    const select = document.getElementById("coach-course");
+    if (!recommendations || recommendations.length === 0) {
+      select.innerHTML = '<option value="">No recommendations yet -- fetch some first</option>';
+      return;
+    }
+    select.innerHTML = recommendations.map(r =>
+      `<option value="${r.course_id}">#${r.rank} ${r.title} (score ${r.score})</option>`
+    ).join("");
+  }
 
   function renderRecommendations(data) {
     if (data.recommendations.length === 0) {
@@ -269,6 +311,7 @@
         results.innerHTML = `<p class="error">${recData.detail || "Something went wrong."}</p>`;
       } else {
         renderRecommendations(recData);
+        populateCoachDropdown(recData.recommendations);
       }
 
       if (!breakdownRes.ok) {
@@ -313,6 +356,38 @@
       aiAnswer.innerHTML = `<div class="ai-answer">${marked.parse(data.answer)}</div>`;
     } catch (err) {
       aiAnswer.innerHTML = '<p class="error">Could not reach the API. Is the server running?</p>';
+    }
+  });
+
+  const coachForm = document.getElementById("coach-form");
+  const coachAnswer = document.getElementById("coach-answer");
+
+  coachForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const userId = document.getElementById("user_id").value.trim();
+    const courseId = document.getElementById("coach-course").value;
+    const n = document.getElementById("n").value || 5;
+    if (!userId || !courseId) {
+      coachAnswer.innerHTML = '<p class="error">Fetch recommendations and pick a course first.</p>';
+      return;
+    }
+
+    coachAnswer.innerHTML = '<p class="status">Writing...</p>';
+
+    try {
+      const res = await fetch(`/users/${encodeURIComponent(userId)}/coach?course_id=${encodeURIComponent(courseId)}&n=${n}`, {
+        method: "POST",
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        coachAnswer.innerHTML = `<p class="error">${data.detail || "Something went wrong."}</p>`;
+        return;
+      }
+
+      coachAnswer.innerHTML = `<div class="ai-answer">${marked.parse(data.message)}</div>`;
+    } catch (err) {
+      coachAnswer.innerHTML = '<p class="error">Could not reach the API. Is the server running?</p>';
     }
   });
 </script>
