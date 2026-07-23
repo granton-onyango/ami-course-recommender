@@ -5,3 +5,5 @@ __pycache__/
 *.md
 !README.md
 .env
+
+!WRITEUP.md
