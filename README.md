@@ -1,5 +1,9 @@
 # AMI Course Recommendation Engine
 
+**🔗 Live demo: [https://ami-course-recommender.onrender.com](https://ami-course-recommender.onrender.com)**
+
+*Free Render tier — the first request after a period of inactivity can take ~30-60s to wake up (cold start). Give it a moment before assuming it's broken. 😂*
+
 Explainable course recommendations for the AI Coach Bot — given a user,
 returns the top N recommended courses, each with a rank, a score, and a
 specific human-readable reason.
