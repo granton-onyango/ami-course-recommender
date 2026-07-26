@@ -50,6 +50,22 @@ Real, captured output — not a mockup. `samples/sample_output.md` has full
 responses (`n=5`) for three usage tiers: a true cold-start user, a
 mid-usage user, and a heavy-usage user.
 
+## Running tests
+
+```bash
+pytest
+```
+
+26 tests, split by file: `tests/test_filters.py` (the hard eligibility
+gates — completed courses, prerequisites, level caps), `tests/test_signals.py`
+(the three independent scoring functions), `tests/test_weighting.py` (the
+cold-start renormalization policy — including a test that directly proves
+renormalizing scores higher than a naive treat-missing-as-zero policy
+would), and `tests/test_recommend.py` (the full filter -> score -> rank
+pipeline, end to end). Each test builds a small, hand-crafted table inline
+rather than depending on the generated `data/*.csv` files, so what's being
+tested is obvious from reading the test itself.
+
 ## API endpoints
 
 | Method | Path | What it does |
@@ -69,6 +85,7 @@ mid-usage user, and a heavy-usage user.
 ├── ARCHITECTURE.md
 ├── WRITEUP.md
 ├── requirements.txt
+├── pytest.ini                 tells pytest to add the repo root to sys.path (so `from engine import ...` resolves)
 ├── .python-version           pins the interpreter this was built/tested against (3.9.6)
 ├── taxonomy.py                shared topic/level/skill vocabulary (single source of truth)
 ├── api/
@@ -92,6 +109,11 @@ mid-usage user, and a heavy-usage user.
 ├── static/
 │   ├── index.html                single-page UI (recommendations / breakdown / AI tabs)
 │   └── marked.min.js             markdown rendering for the AI tab's answers (bundled, no CDN)
+├── tests/
+│   ├── test_filters.py           completed / prerequisite / level filtering
+│   ├── test_signals.py           survey / usage / work_info scoring
+│   ├── test_weighting.py         blending + cold-start renormalization
+│   └── test_recommend.py         full pipeline, end to end
 └── samples/
     └── sample_output.md          real output for a cold-start, mid-usage, and heavy-usage user
 ```
