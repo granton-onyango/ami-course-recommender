@@ -7,3 +7,12 @@ __pycache__/
 .env
 
 !WRITEUP.md
+# keys, secrets and build output (added 2026-10-04)
+*.jks
+*.keystore
+*.pem
+.env.*
+!.env*.example
+key.properties
+*.p12
+commit_story*.sh
